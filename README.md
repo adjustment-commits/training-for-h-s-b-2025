@@ -1,1 +1,0 @@
-# training-for-h-s-b-2025
