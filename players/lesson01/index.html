@@ -5,20 +5,26 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>第1回｜野球動作の再学習</title>
 <link rel="stylesheet" href="style.css">
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const pass = prompt("【選手専用ページ】\n合言葉を入力してください：");
+  if (pass !== "adjtraining") {
+    document.body.innerHTML = "<h2 style='color:red;text-align:center;margin-top:100px;'>アクセス拒否</h2>";
+  }
+});
+</script>
 </head>
 <body>
 
 <div id="container">
 
-  <!-- Scene 1 -->
   <section class="scene active" id="scene1">
     <h1>第1回｜野球動作の再学習</h1>
-    <p>今日は「野球の動き」をトレーニングで学び直す。</p>
-    <p>バットもボールも使わない。<br>でも、この時間が“野球を上手くする”ための基礎になる。</p>
-    <button class="next-btn">▶ 次へ</button>
+    <p>ここは、君たちだけのトレーニングルーム。</p>
+    <p>「筋トレ」じゃない。「野球動作」を再学習する時間だ。</p>
+    <button class="next-btn">▶ スタート</button>
   </section>
 
-  <!-- Scene 2 -->
   <section class="scene" id="scene2">
     <h2>野球とフィジカルの関係</h2>
     <p>ピッチングもバッティングも、すべては「順番」で決まる。</p>
@@ -37,31 +43,26 @@
       </div>
     </div>
 
-    <p>この順番がずれた瞬間、力は伝わらない。<br>
-    トレーニングは、その順番を体に覚えさせる時間だ。</p>
+    <p>この順番がずれた瞬間、力は伝わらない。</p>
+    <p>トレーニングは、その順番を体に覚えさせる時間だ。</p>
     <button class="next-btn">▶ 次へ</button>
   </section>
 
-  <!-- Scene 3 -->
   <section class="scene" id="scene3">
     <h2>体験：分けて動かす</h2>
-    <p>骨盤だけを動かしてみる。<br>
-    次に、胸だけを動かしてみる。</p>
-    <p>両方を同時に動かしたとき、速さが消える。<br>
-    上と下が別々に動くこと――それが「自由に動ける身体」。</p>
+    <p>骨盤だけを動かしてみる。次に、胸だけを動かす。</p>
+    <p>両方を同時に動かすと、速さが消える。</p>
+    <p>上と下が別々に動くこと——それが「自由に動ける身体」。</p>
     <button class="next-btn">▶ 次へ</button>
   </section>
 
-  <!-- Scene 4 -->
   <section class="scene" id="scene4">
     <h2>フィジカルの目的</h2>
-    <p>筋トレは“出す力”を増やす。<br>
-    トレーニングは“伝える力”を整える。</p>
+    <p>筋トレは“出す力”を増やす。<br>トレーニングは“伝える力”を整える。</p>
     <p>この違いを理解して動ける選手は、成長が早い。</p>
     <button class="next-btn">▶ 次へ</button>
   </section>
 
-  <!-- Scene 5 -->
   <section class="scene" id="scene5">
     <h2>考える時間</h2>
     <p>今日、自分の体はどこから動いていた？</p>
@@ -73,7 +74,6 @@
     <div id="feedback"></div>
   </section>
 
-  <!-- Scene 6 -->
   <section class="scene" id="scene6">
     <h2>まとめ</h2>
     <p>トレーニングは、野球動作の再学習。</p>
@@ -86,4 +86,3 @@
 <script src="main.js"></script>
 </body>
 </html>
-
