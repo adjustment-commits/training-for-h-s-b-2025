@@ -212,7 +212,9 @@ button:hover {
     max-width: 90%;
     margin: 8px auto;
   }
-  /* ===============================
+}  /* 👈 ここでスマホ用終了 */
+
+/* ===============================
    動作ドリル図解（Scene8〜9）
    =============================== */
 
@@ -259,5 +261,4 @@ button:hover {
 .arrow-rotate-right, .arrow-rotate-left {
   opacity: 0.5;
   animation: arrowPulse 2.5s ease-in-out infinite alternate;
-} 
 }
