@@ -1,134 +1,46 @@
-body {
-  font-family: 'Noto Sans JP', sans-serif;
-  background: linear-gradient(#0d1117, #1a2535);
-  color: #fff;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-}
+// ================================
+// 第1回：野球動作の再学習
+// ================================
 
-#container {
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
+document.addEventListener("DOMContentLoaded", function() {
 
-.scene {
-  text-align: center;
-  opacity: 0;
-  transition: opacity 0.8s ease;
-  max-width: 720px;
-  padding: 20px;
-  position: absolute;
-}
+  // --- 合言葉ロック ---
+  const pass = prompt("【選手専用ページ】\n合言葉を入力してください：");
+  if (pass !== "adjtraining") {
+    document.body.innerHTML = "<h2 style='color:red;text-align:center;margin-top:100px;'>アクセス拒否</h2>";
+    return; // 間違えたらここで終了
+  }
 
-.scene.active {
-  opacity: 1;
-  position: relative;
-}
+  // --- シーン切り替え処理 ---
+  const scenes = document.querySelectorAll(".scene");
+  const nextButtons = document.querySelectorAll(".next-btn");
+  const choices = document.querySelectorAll(".choice");
+  const feedback = document.getElementById("feedback");
 
-h1, h2 {
-  color: #d84a4a;
-}
+  let currentScene = 0;
 
-p {
-  font-size: 1.1rem;
-  line-height: 1.8;
-}
+  nextButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      scenes[currentScene].classList.remove("active");
+      currentScene++;
+      if (currentScene < scenes.length) {
+        scenes[currentScene].classList.add("active");
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    });
+  });
 
-button {
-  background: #d84a4a;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 18px;
-  font-size: 1rem;
-  margin-top: 20px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-button:hover {
-  background: #f06161;
-}
-
-/* Diagram */
-.diagram {
-  margin: 30px auto;
-  text-align: center;
-}
-
-.diagram h3 {
-  color: #d84a4a;
-  margin-bottom: 15px;
-  font-size: 1.2rem;
-}
-
-.flow {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.block {
-  width: 110px;
-  padding: 10px;
-  border: 2px solid #ccc;
-  border-radius: 6px;
-  background: #1c2433;
-  color: #fff;
-  font-weight: bold;
-}
-
-.block span {
-  display: block;
-  font-size: 0.8rem;
-  color: #ccc;
-  margin-top: 4px;
-}
-
-.highlight {
-  border-color: #d84a4a;
-  background: #2a313f;
-}
-
-.arrow {
-  font-size: 1.5rem;
-  color: #d84a4a;
-}
-
-/* Quiz feedback */
-.choices {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-top: 20px;
-}
-
-.choice {
-  background: #1c2433;
-  border: 1px solid #d84a4a;
-  color: #fff;
-}
-
-.choice:hover {
-  background: #d84a4a;
-}
-
-#feedback {
-  margin-top: 20px;
-  font-size: 1.1rem;
-  color: #ffd166;
-}
-
-.end {
-  margin-top: 40px;
-  font-style: italic;
-  color: #ccc;
-}
-
+  // --- クイズ判定 ---
+  choices.forEach(choice => {
+    choice.addEventListener("click", () => {
+      const answer = choice.dataset.answer;
+      if (answer === "骨盤から") {
+        feedback.textContent = "正解。感じて説明できる選手が強い。";
+        feedback.style.color = "#7CFC00";
+      } else {
+        feedback.textContent = "違う。でも、その違和感が学びの始まり。";
+        feedback.style.color = "#ffd166";
+      }
+    });
+  });
+});
