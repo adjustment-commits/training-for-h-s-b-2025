@@ -23,18 +23,20 @@ body {
 }
 
 .scene {
+  display: none;          /* ← 非表示が基本 */
   text-align: center;
   opacity: 0;
   transition: opacity 0.8s ease;
   max-width: 720px;
   padding: 20px;
-  position: absolute;
+  position: relative;
 }
 
 .scene.active {
+  display: block;          /* ← 表示する */
   opacity: 1;
-  position: relative;
 }
+
 
 h1, h2 {
   color: #d84a4a;
