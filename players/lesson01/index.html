@@ -4,19 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>第1回｜野球動作の再学習</title>
-
-<!-- ✅ PWA設定 -->
-<link rel="manifest" href="./manifest.json">
-<meta name="theme-color" content="#0d1117">
-<link rel="apple-touch-icon" sizes="192x192" href="./icons/icon-192.png">
-<link rel="apple-touch-icon" sizes="512x512" href="./icons/icon-512.png">
-
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div id="container">
 
+  <!-- Scene 1 -->
   <section class="scene active" id="scene1">
     <h1>第1回｜野球動作の再学習</h1>
     <p>ここは、君たちだけのトレーニングルーム。</p>
@@ -25,125 +19,80 @@
   </section>
 
   <!-- Scene 2 -->
-<section class="scene" id="scene2">
-  <h2>野球とフィジカルの関係</h2>
-  <p>ピッチングもバッティングも、すべては「順番」で決まる。</p>
-  <p>足 → 骨盤 → 胸郭 → 腕</p>
+  <section class="scene" id="scene2">
+    <h2>野球とフィジカルの関係</h2>
+    <p>ピッチングもバッティングも、すべては「順番」で決まる。</p>
+    <p>足 → 骨盤 → 胸郭 → 腕</p>
 
-  <div class="diagram motion">
-    <h3>力の通り道</h3>
-    <svg viewBox="0 0 600 180" xmlns="http://www.w3.org/2000/svg">
-      <!-- 足 -->
-      <circle cx="80" cy="90" r="35" fill="#1c2433" stroke="#ccc" stroke-width="3"></circle>
-      <text x="80" y="95" text-anchor="middle" fill="#fff" font-size="16">足</text>
+    <div class="diagram motion">
+      <h3>力の通り道</h3>
+      <svg viewBox="0 0 600 180" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="80" cy="90" r="35" fill="#1c2433" stroke="#ccc" stroke-width="3"></circle>
+        <text x="80" y="95" text-anchor="middle" fill="#fff" font-size="16">足</text>
 
-      <!-- 骨盤 -->
-      <circle cx="220" cy="90" r="35" fill="#2a313f" stroke="#d84a4a" stroke-width="3" class="pulse"></circle>
-      <text x="220" y="95" text-anchor="middle" fill="#fff" font-size="16">骨盤</text>
+        <circle cx="220" cy="90" r="35" fill="#2a313f" stroke="#d84a4a" stroke-width="3" class="pulse"></circle>
+        <text x="220" y="95" text-anchor="middle" fill="#fff" font-size="16">骨盤</text>
 
-      <!-- 胸郭 -->
-      <circle cx="360" cy="90" r="35" fill="#1c2433" stroke="#ccc" stroke-width="3"></circle>
-      <text x="360" y="95" text-anchor="middle" fill="#fff" font-size="16">胸郭</text>
+        <circle cx="360" cy="90" r="35" fill="#1c2433" stroke="#ccc" stroke-width="3"></circle>
+        <text x="360" y="95" text-anchor="middle" fill="#fff" font-size="16">胸郭</text>
 
-      <!-- 腕 -->
-      <circle cx="500" cy="90" r="35" fill="#1c2433" stroke="#ccc" stroke-width="3"></circle>
-      <text x="500" y="95" text-anchor="middle" fill="#fff" font-size="16">腕</text>
+        <circle cx="500" cy="90" r="35" fill="#1c2433" stroke="#ccc" stroke-width="3"></circle>
+        <text x="500" y="95" text-anchor="middle" fill="#fff" font-size="16">腕</text>
 
-      <!-- 矢印線 -->
-      <line x1="115" y1="90" x2="185" y2="90" stroke="#d84a4a" stroke-width="3" class="flowline"/>
-      <line x1="255" y1="90" x2="325" y2="90" stroke="#d84a4a" stroke-width="3" class="flowline"/>
-      <line x1="395" y1="90" x2="465" y2="90" stroke="#d84a4a" stroke-width="3" class="flowline"/>
-    </svg>
-  </div>
+        <line x1="115" y1="90" x2="185" y2="90" stroke="#d84a4a" stroke-width="3" class="flowline"/>
+        <line x1="255" y1="90" x2="325" y2="90" stroke="#d84a4a" stroke-width="3" class="flowline"/>
+        <line x1="395" y1="90" x2="465" y2="90" stroke="#d84a4a" stroke-width="3" class="flowline"/>
+      </svg>
+    </div>
 
-  <p>この順番がずれた瞬間、力は伝わらない。<br>
-  トレーニングは、その順番を体に覚えさせる時間だ。</p>
+    <p>この順番がずれた瞬間、力は伝わらない。<br>トレーニングは、その順番を体に覚えさせる時間だ。</p>
+    <button class="back-btn">◀ 戻る</button>
+    <button class="next-btn">▶ 次へ</button>
+  </section>
 
-  <button class="next-btn">▶ 次へ</button>
-</section>
-
-
+  <!-- Scene 3 -->
   <section class="scene" id="scene3">
     <h2>体験：分けて動かす</h2>
     <p>骨盤だけを動かしてみる。次に、胸だけを動かす。</p>
     <p>両方を同時に動かすと、速さが消える。</p>
     <p>上と下が別々に動くこと——それが「自由に動ける身体」。</p>
+    <button class="back-btn">◀ 戻る</button>
     <button class="next-btn">▶ 次へ</button>
   </section>
 
+  <!-- Scene 4 -->
   <section class="scene" id="scene4">
     <h2>フィジカルの目的</h2>
     <p>筋トレは“出す力”を増やす。<br>トレーニングは“伝える力”を整える。</p>
     <p>この違いを理解して動ける選手は、成長が早い。</p>
+    <button class="back-btn">◀ 戻る</button>
     <button class="next-btn">▶ 次へ</button>
   </section>
 
+  <!-- Scene 5 -->
   <section class="scene" id="scene5">
-    <h2>考える時間</h2>
-    <p>今日、自分の体はどこから動いていた？</p>
+    <h2>問い</h2>
+    <p>野球では、どこが動くきっかけになると思う？</p>
     <div class="choices">
       <button class="choice" data-answer="腕から">腕から</button>
       <button class="choice" data-answer="胸から">胸から</button>
       <button class="choice" data-answer="骨盤から">骨盤から</button>
     </div>
     <div id="feedback"></div>
+    <button class="back-btn">◀ 戻る</button>
   </section>
 
+  <!-- Scene 6 -->
   <section class="scene" id="scene6">
     <h2>まとめ</h2>
     <p>トレーニングは、野球動作の再学習。</p>
     <p>バットを持たない時間こそ、野球の基礎を育てる時間だ。</p>
     <p class="end">── 第2回へ続く ──</p>
+    <button class="back-btn">◀ 戻る</button>
   </section>
 
-  <!-- Scene 7 -->
-<section class="scene" id="scene7">
-  <h2>体を“野球モード”にする</h2>
-  <p>ウォームアップの目的は、体温を上げることじゃない。<br>
-  「神経と関節のスイッチを入れる」ことだ。</p>
-  <p>ゆっくりでいい。<br>
-  自分の体を動かす準備を、丁寧に行おう。</p>
-  <button class="next-btn">▶ 骨盤ウォームアップへ</button>
-</section>
-
-<!-- Scene 8 -->
-<section class="scene" id="scene8">
-  <h2>骨盤ウォームアップ</h2>
-  <p>ストレッチポール or エンビ棒を持って、骨盤を前後にスライド。<br>
-  <strong>「胸を置いたまま骨盤だけ動かす」</strong>意識で。</p>
-  <p>10回×2セット。</p>
-  <button class="next-btn">▶ 胸郭分離へ</button>
-</section>
-
-<!-- Scene 9 -->
-<section class="scene" id="scene9">
-  <h2>胸郭を分ける</h2>
-  <p>骨盤を右へ、胸を左へ。<br>
-  逆方向に動かすことで“ねじれ”が生まれる。</p>
-  <p>骨盤が動きのリーダー、胸は追いかける側。</p>
-  <button class="next-btn">▶ 最後へ</button>
-</section>
-
-<!-- Scene 10 -->
-<section class="scene" id="scene10">
-  <h2>今日のまとめ</h2>
-  <p>順番を感じたか？<br>
-  骨盤→胸郭→腕。<br>
-  これが野球動作の基礎リズム。</p>
-  <p class="end">次回は「力を伝えるとは？」で、<br>その順番を“地面から”つなげていく。</p>
-</section>
-
 </div>
+
 <script src="main.js"></script>
-
-<!-- ✅ Service Worker登録 -->
-<script>
-if ("serviceWorker" in navigator) {
-  window.addEventListener("load", () => {
-    navigator.serviceWorker.register("./service-worker.js");
-  });
-}
-</script>
-
 </body>
 </html>
