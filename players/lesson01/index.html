@@ -25,28 +25,44 @@ document.addEventListener("DOMContentLoaded", () => {
     <button class="next-btn">▶ スタート</button>
   </section>
 
-  <section class="scene" id="scene2">
-    <h2>野球とフィジカルの関係</h2>
-    <p>ピッチングもバッティングも、すべては「順番」で決まる。</p>
-    <p>足 → 骨盤 → 胸郭 → 腕</p>
+  <!-- Scene 2 -->
+<section class="scene" id="scene2">
+  <h2>野球とフィジカルの関係</h2>
+  <p>ピッチングもバッティングも、すべては「順番」で決まる。</p>
+  <p>足 → 骨盤 → 胸郭 → 腕</p>
 
-    <div class="diagram">
-      <h3>力の通り道</h3>
-      <div class="flow">
-        <div class="block foot">足<span>力の出発点</span></div>
-        <div class="arrow">➡</div>
-        <div class="block pelvis highlight">骨盤<span>動作のリーダー</span></div>
-        <div class="arrow">➡</div>
-        <div class="block thorax">胸郭<span>ねじれと伝達</span></div>
-        <div class="arrow">➡</div>
-        <div class="block arm">腕<span>出力の結果</span></div>
-      </div>
-    </div>
+  <div class="diagram motion">
+    <h3>力の通り道</h3>
+    <svg viewBox="0 0 600 180" xmlns="http://www.w3.org/2000/svg">
+      <!-- 足 -->
+      <circle cx="80" cy="90" r="35" fill="#1c2433" stroke="#ccc" stroke-width="3"></circle>
+      <text x="80" y="95" text-anchor="middle" fill="#fff" font-size="16">足</text>
 
-    <p>この順番がずれた瞬間、力は伝わらない。</p>
-    <p>トレーニングは、その順番を体に覚えさせる時間だ。</p>
-    <button class="next-btn">▶ 次へ</button>
-  </section>
+      <!-- 骨盤 -->
+      <circle cx="220" cy="90" r="35" fill="#2a313f" stroke="#d84a4a" stroke-width="3" class="pulse"></circle>
+      <text x="220" y="95" text-anchor="middle" fill="#fff" font-size="16">骨盤</text>
+
+      <!-- 胸郭 -->
+      <circle cx="360" cy="90" r="35" fill="#1c2433" stroke="#ccc" stroke-width="3"></circle>
+      <text x="360" y="95" text-anchor="middle" fill="#fff" font-size="16">胸郭</text>
+
+      <!-- 腕 -->
+      <circle cx="500" cy="90" r="35" fill="#1c2433" stroke="#ccc" stroke-width="3"></circle>
+      <text x="500" y="95" text-anchor="middle" fill="#fff" font-size="16">腕</text>
+
+      <!-- 矢印線 -->
+      <line x1="115" y1="90" x2="185" y2="90" stroke="#d84a4a" stroke-width="3" class="flowline"/>
+      <line x1="255" y1="90" x2="325" y2="90" stroke="#d84a4a" stroke-width="3" class="flowline"/>
+      <line x1="395" y1="90" x2="465" y2="90" stroke="#d84a4a" stroke-width="3" class="flowline"/>
+    </svg>
+  </div>
+
+  <p>この順番がずれた瞬間、力は伝わらない。<br>
+  トレーニングは、その順番を体に覚えさせる時間だ。</p>
+
+  <button class="next-btn">▶ 次へ</button>
+</section>
+
 
   <section class="scene" id="scene3">
     <h2>体験：分けて動かす</h2>
