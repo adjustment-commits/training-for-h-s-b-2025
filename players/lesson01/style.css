@@ -29,4 +29,29 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 });
+.diagram.motion svg {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+  display: block;
+}
+
+.flowline {
+  stroke-dasharray: 6 6;
+  animation: flow 2s linear infinite;
+}
+
+@keyframes flow {
+  from { stroke-dashoffset: 0; }
+  to { stroke-dashoffset: 12; }
+}
+
+.pulse {
+  animation: pulse 1.2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { stroke-width: 3; filter: brightness(1); }
+  50% { stroke-width: 6; filter: brightness(1.4); }
+}
 
