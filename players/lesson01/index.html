@@ -4,6 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>第1回｜野球動作の再学習</title>
+
+<!-- ✅ PWA対応 -->
+<link rel="manifest" href="./manifest.json">
+<meta name="theme-color" content="#0d1117">
+<link rel="apple-touch-icon" sizes="192x192" href="./icons/icon-192.png">
+<link rel="apple-touch-icon" sizes="512x512" href="./icons/icon-512.png">
+
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -29,16 +36,12 @@
       <svg viewBox="0 0 600 180" xmlns="http://www.w3.org/2000/svg">
         <circle cx="80" cy="90" r="35" fill="#1c2433" stroke="#ccc" stroke-width="3"></circle>
         <text x="80" y="95" text-anchor="middle" fill="#fff" font-size="16">足</text>
-
         <circle cx="220" cy="90" r="35" fill="#2a313f" stroke="#d84a4a" stroke-width="3" class="pulse"></circle>
         <text x="220" y="95" text-anchor="middle" fill="#fff" font-size="16">骨盤</text>
-
         <circle cx="360" cy="90" r="35" fill="#1c2433" stroke="#ccc" stroke-width="3"></circle>
         <text x="360" y="95" text-anchor="middle" fill="#fff" font-size="16">胸郭</text>
-
         <circle cx="500" cy="90" r="35" fill="#1c2433" stroke="#ccc" stroke-width="3"></circle>
         <text x="500" y="95" text-anchor="middle" fill="#fff" font-size="16">腕</text>
-
         <line x1="115" y1="90" x2="185" y2="90" stroke="#d84a4a" stroke-width="3" class="flowline"/>
         <line x1="255" y1="90" x2="325" y2="90" stroke="#d84a4a" stroke-width="3" class="flowline"/>
         <line x1="395" y1="90" x2="465" y2="90" stroke="#d84a4a" stroke-width="3" class="flowline"/>
@@ -52,27 +55,57 @@
 
   <!-- Scene 3 -->
   <section class="scene" id="scene3">
-    <h2>体験：分けて動かす</h2>
-    <p>骨盤だけを動かしてみる。次に、胸だけを動かす。</p>
-    <p>両方を同時に動かすと、速さが消える。</p>
-    <p>上と下が別々に動くこと——それが「自由に動ける身体」。</p>
+    <h2>体験① 骨盤だけを動かす</h2>
+    <p>ストレッチポール or エンビ棒を持って、<br>胸を置いたまま骨盤だけを前後に動かす。</p>
+    <p><strong>胸を動かすな。骨盤がリーダー。</strong></p>
+    <p>10回×2セット。</p>
     <button class="back-btn">◀ 戻る</button>
     <button class="next-btn">▶ 次へ</button>
   </section>
 
   <!-- Scene 4 -->
   <section class="scene" id="scene4">
-    <h2>フィジカルの目的</h2>
-    <p>筋トレは“出す力”を増やす。<br>トレーニングは“伝える力”を整える。</p>
-    <p>この違いを理解して動ける選手は、成長が早い。</p>
+    <h2>体験② 胸だけを動かす</h2>
+    <p>骨盤を止めたまま、胸を左右にスライド。</p>
+    <p>背骨の上で胸郭が滑るイメージ。<br>骨盤との“ズレ”を感じよう。</p>
+    <p>10回×2セット。</p>
     <button class="back-btn">◀ 戻る</button>
     <button class="next-btn">▶ 次へ</button>
   </section>
 
   <!-- Scene 5 -->
   <section class="scene" id="scene5">
-    <h2>問い</h2>
-    <p>野球では、どこが動くきっかけになると思う？</p>
+    <h2>実践① 骨盤スライドドリル</h2>
+    <p>ポールを肩に担いで、骨盤だけ前後にスライド。</p>
+    <p><strong>胸の位置を変えずに骨盤を動かす。</strong><br>動きが止まるポイントを探す。</p>
+    <button class="back-btn">◀ 戻る</button>
+    <button class="next-btn">▶ 次へ</button>
+  </section>
+
+  <!-- Scene 6 -->
+  <section class="scene" id="scene6">
+    <h2>実践② 胸郭分離ドリル</h2>
+    <p>骨盤を右へ、胸を左へ。<br>逆も同じ。ねじりを感じる。</p>
+    <p><strong>骨盤がリーダー。胸は後からついてくる。</strong></p>
+    <p>左右5回×2セット。</p>
+    <button class="back-btn">◀ 戻る</button>
+    <button class="next-btn">▶ 次へ</button>
+  </section>
+
+  <!-- Scene 7 -->
+  <section class="scene" id="scene7">
+    <h2>実践③ 連動ドリル</h2>
+    <p>骨盤→胸→腕の順にリズムで動かす。</p>
+    <p>投球でも打撃でも、この順番がすべての基本。</p>
+    <p><strong>流れを感じる。</strong></p>
+    <button class="back-btn">◀ 戻る</button>
+    <button class="next-btn">▶ 次へ</button>
+  </section>
+
+  <!-- Scene 8 -->
+  <section class="scene" id="scene8">
+    <h2>考える時間</h2>
+    <p>今日の練習で、動きの“きっかけ”はどこにあった？</p>
     <div class="choices">
       <button class="choice" data-answer="腕から">腕から</button>
       <button class="choice" data-answer="胸から">胸から</button>
@@ -82,11 +115,21 @@
     <button class="back-btn">◀ 戻る</button>
   </section>
 
-  <!-- Scene 6 -->
-  <section class="scene" id="scene6">
+  <!-- Scene 9 -->
+  <section class="scene" id="scene9">
+    <h2>整理と確認</h2>
+    <p>順番はこうだ。</p>
+    <p>① 足（地面）<br>② 骨盤<br>③ 胸郭<br>④ 腕</p>
+    <p>ズレた瞬間、力は逃げる。</p>
+    <button class="back-btn">◀ 戻る</button>
+    <button class="next-btn">▶ 次へ</button>
+  </section>
+
+  <!-- Scene 10 -->
+  <section class="scene" id="scene10">
     <h2>まとめ</h2>
-    <p>トレーニングは、野球動作の再学習。</p>
-    <p>バットを持たない時間こそ、野球の基礎を育てる時間だ。</p>
+    <p>骨盤が動きのリーダー。胸はそれを追う。</p>
+    <p>今日感じた「順番」を、次回の動きに繋げよう。</p>
     <p class="end">── 第2回へ続く ──</p>
     <button class="back-btn">◀ 戻る</button>
   </section>
@@ -94,5 +137,13 @@
 </div>
 
 <script src="main.js"></script>
+<script>
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("./service-worker.js");
+  });
+}
+</script>
+
 </body>
 </html>
