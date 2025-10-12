@@ -212,4 +212,52 @@ button:hover {
     max-width: 90%;
     margin: 8px auto;
   }
+  /* ===============================
+   動作ドリル図解（Scene8〜9）
+   =============================== */
+
+.pelvis-move {
+  animation: pelvisSlide 2s ease-in-out infinite alternate;
+}
+
+@keyframes pelvisSlide {
+  from { transform: translateX(-20px); }
+  to { transform: translateX(20px); }
+}
+
+.arrow-move, .arrow-move-rev {
+  opacity: 0.6;
+  animation: arrowPulse 2s ease-in-out infinite alternate;
+}
+
+@keyframes arrowPulse {
+  from { opacity: 0.2; }
+  to { opacity: 1; }
+}
+
+/* ねじれ動作（胸郭と骨盤の分離） */
+.thorax-rotate {
+  transform-origin: center top;
+  animation: thoraxRotate 3s ease-in-out infinite alternate;
+}
+
+.pelvis-rotate {
+  transform-origin: center bottom;
+  animation: pelvisRotate 3s ease-in-out infinite alternate;
+}
+
+@keyframes thoraxRotate {
+  from { transform: rotate(-10deg); }
+  to { transform: rotate(10deg); }
+}
+
+@keyframes pelvisRotate {
+  from { transform: rotate(10deg); }
+  to { transform: rotate(-10deg); }
+}
+
+.arrow-rotate-right, .arrow-rotate-left {
+  opacity: 0.5;
+  animation: arrowPulse 2.5s ease-in-out infinite alternate;
+} 
 }
