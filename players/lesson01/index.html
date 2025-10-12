@@ -4,6 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>第1回｜野球動作の再学習</title>
+
+<!-- ✅ PWA設定 -->
+<link rel="manifest" href="./manifest.json">
+<meta name="theme-color" content="#0d1117">
+<link rel="apple-touch-icon" sizes="192x192" href="./icons/icon-192.png">
+<link rel="apple-touch-icon" sizes="512x512" href="./icons/icon-512.png">
+
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -127,7 +134,16 @@
 </section>
 
 </div>
-
 <script src="main.js"></script>
+
+<!-- ✅ Service Worker登録 -->
+<script>
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("./service-worker.js");
+  });
+}
+</script>
+
 </body>
 </html>
