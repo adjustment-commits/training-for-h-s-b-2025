@@ -33,8 +33,28 @@ h1 {
 .sub {
   color: #fef9c3;
   font-size: 1rem;
-  margin-bottom: 10px;
+  margin-bottom: 14px;  /* ← 少し余白を増やしてリンクと分離 */
   text-shadow: 0 0 8px rgba(250,204,21,0.3);
+}
+
+/* --- Player Link --- */
+.player-link {
+  display: inline-block;
+  margin-top: 8px;
+  background: linear-gradient(90deg, #38bdf8, #0ea5e9);
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  transition: 0.3s;
+  box-shadow: 0 0 10px rgba(56,189,248,0.4);
+}
+
+.player-link:hover {
+  background: linear-gradient(90deg, #0ea5e9, #38bdf8);
+  transform: scale(1.03);
 }
 
 /* --- Section Titles --- */
