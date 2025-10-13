@@ -127,6 +127,21 @@ blockquote {
   box-shadow: 0 0 10px rgba(59,130,246,0.15);
 }
 
+.coach-note {
+  background: #f5f5f5;
+  padding: 20px;
+  margin: 40px 0;
+  border-left: 6px solid #444;
+  border-radius: 4px;
+}
+.coach-note h2 { margin-top: 0; }
+.coach-note blockquote {
+  background: #fff;
+  padding: 10px 15px;
+  border-left: 4px solid #999;
+  font-style: italic;
+}
+
 /* --- Footer --- */
 footer {
   margin-top: 60px;
