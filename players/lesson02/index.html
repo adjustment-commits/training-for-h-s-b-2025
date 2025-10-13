@@ -1,1 +1,147 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第2回｜力を伝えるとは？</title>
 
+<!-- ✅ PWA継承 -->
+<link rel="manifest" href="../lesson01/manifest.json">
+<meta name="theme-color" content="#0d1117">
+<link rel="apple-touch-icon" sizes="192x192" href="../lesson01/icons/icon-192.png">
+<link rel="apple-touch-icon" sizes="512x512" href="../lesson01/icons/icon-512.png">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="container">
+
+  <!-- Scene 1 -->
+  <section class="scene active" id="scene1">
+    <h1>第2回｜力を伝えるとは？</h1>
+    <p>前回は「順番」を学んだ。今回はその順番を“つなぐ”回。</p>
+    <p>力はどこから来て、どこへ行くのか——そこを体で理解する。</p>
+    <button class="next-btn">▶ スタート</button>
+  </section>
+
+  <!-- Scene 2 -->
+  <section class="scene" id="scene2">
+    <h2>力は地面から始まる</h2>
+    <p>ピッチングもバッティングも、最初のエネルギーは<br><strong>「地面反力」</strong>から生まれる。</p>
+    <div class="diagram motion">
+      <h3>力の流れ</h3>
+      <svg viewBox="0 0 600 180" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="80" cy="90" r="35" fill="#2a313f" stroke="#d84a4a" stroke-width="3" class="pulse"></circle>
+        <text x="80" y="95" text-anchor="middle" fill="#fff" font-size="16">地面</text>
+
+        <circle cx="220" cy="90" r="35" fill="#1c2433" stroke="#ccc" stroke-width="3"></circle>
+        <text x="220" y="95" text-anchor="middle" fill="#fff" font-size="16">足</text>
+
+        <circle cx="360" cy="90" r="35" fill="#1c2433" stroke="#ccc" stroke-width="3"></circle>
+        <text x="360" y="95" text-anchor="middle" fill="#fff" font-size="16">骨盤</text>
+
+        <circle cx="500" cy="90" r="35" fill="#1c2433" stroke="#ccc" stroke-width="3"></circle>
+        <text x="500" y="95" text-anchor="middle" fill="#fff" font-size="16">胸郭</text>
+
+        <line x1="115" y1="90" x2="185" y2="90" stroke="#d84a4a" stroke-width="3" class="flowline"/>
+        <line x1="255" y1="90" x2="325" y2="90" stroke="#d84a4a" stroke-width="3" class="flowline"/>
+        <line x1="395" y1="90" x2="465" y2="90" stroke="#d84a4a" stroke-width="3" class="flowline"/>
+      </svg>
+    </div>
+
+    <p>この流れが切れた瞬間、力は伝わらない。<br>すべては「地面から」だ。</p>
+    <button class="back-btn">◀ 戻る</button>
+    <button class="next-btn">▶ 次へ</button>
+  </section>
+
+  <!-- Scene 3 -->
+  <section class="scene" id="scene3">
+    <h2>体験① 足裏の通り道</h2>
+    <p>両足を肩幅に開き、ゆっくり重心を移動してみよう。</p>
+    <p><strong>かかと → 母指球 → 指先</strong><br>この順番で地面を押す。</p>
+    <p>感じた？それが「力の入口」だ。</p>
+    <button class="back-btn">◀ 戻る</button>
+    <button class="next-btn">▶ 次へ</button>
+  </section>
+
+  <!-- Scene 4 -->
+  <section class="scene" id="scene4">
+    <h2>体験② 骨盤への伝達</h2>
+    <p>片足立ちになり、反対の足で軽く地面を押してみる。</p>
+    <p>その力が「骨盤」に届く感覚を探そう。</p>
+    <p>押すのは足。動かすのは骨盤。<br>ここで“つなぐ”感覚が育つ。</p>
+    <button class="back-btn">◀ 戻る</button>
+    <button class="next-btn">▶ 次へ</button>
+  </section>
+
+  <!-- Scene 5 -->
+  <section class="scene" id="scene5">
+    <h2>実践① ステップ台ドリル</h2>
+    <p>20cm程度のステップ台を使う。<br>軽く踏み出し、押し返す。</p>
+    <p><strong>「跳ぶ」ではなく「押す」。</strong><br>骨盤を前に押し出すように。</p>
+    <p>片脚×10回×2セット。</p>
+    <button class="back-btn">◀ 戻る</button>
+    <button class="next-btn">▶ 次へ</button>
+  </section>
+
+  <!-- Scene 6 -->
+  <section class="scene" id="scene6">
+    <h2>実践② スライドボード</h2>
+    <p>骨盤→胸郭→腕の順で滑らかに動かす。</p>
+    <p><strong>「押して滑る」「胸は遅れてくる」。</strong><br>骨盤リーダーを忘れずに。</p>
+    <p>左右10往復。</p>
+    <button class="back-btn">◀ 戻る</button>
+    <button class="next-btn">▶ 次へ</button>
+  </section>
+
+  <!-- Scene 7 -->
+  <section class="scene" id="scene7">
+    <h2>実践③ ミニハードル連動</h2>
+    <p>3台設置し、前方へテンポよくジャンプ。</p>
+    <p><strong>足で押す → 骨盤で運ぶ → 胸で受ける。</strong></p>
+    <p>力を“出す”ではなく、“伝える”を意識。</p>
+    <button class="back-btn">◀ 戻る</button>
+    <button class="next-btn">▶ 次へ</button>
+  </section>
+
+  <!-- Scene 8 -->
+  <section class="scene" id="scene8">
+    <h2>問い</h2>
+    <p>力を伝えるって、どういうことだと思う？</p>
+    <div class="choices">
+      <button class="choice" data-answer="強く踏む">強く踏むこと</button>
+      <button class="choice" data-answer="滑らかに動く">滑らかに動くこと</button>
+      <button class="choice" data-answer="体全体でつなぐ">体全体でつなぐこと</button>
+    </div>
+    <div id="feedback"></div>
+    <button class="back-btn">◀ 戻る</button>
+  </section>
+
+  <!-- Scene 9 -->
+  <section class="scene" id="scene9">
+    <h2>整理と確認</h2>
+    <p>力の流れを再確認。</p>
+    <p>① 地面 → ② 足 → ③ 骨盤 → ④ 胸郭 → ⑤ 腕</p>
+    <p>「力を出す」ではなく「力をつなぐ」。</p>
+    <button class="back-btn">◀ 戻る</button>
+    <button class="next-btn">▶ 次へ</button>
+  </section>
+
+  <!-- Scene 10 -->
+  <section class="scene" id="scene10">
+    <h2>まとめ</h2>
+    <p>地面を押す感覚、骨盤でつなぐ感覚をつかんだか？</p>
+    <p>力は流れるもの。止めず、つなげる。</p>
+    <p class="end">── 第3回「安定と軸」へ続く ──</p>
+    <div class="nav-buttons">
+      <button class="back-btn">◀ 戻る</button>
+      <a href="../lesson03/index.html" class="next-lesson-btn">▶ 第3回へ</a>
+    </div>
+  </section>
+
+</div>
+
+<script src="../lesson01/main.js"></script>
+</body>
+</html>
