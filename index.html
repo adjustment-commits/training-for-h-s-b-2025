@@ -123,6 +123,24 @@ footer {
 <a href="coach/lesson01/index.html" class="coach-link">▶ 指導者マニュアルへ</a>
 
 <a href="certificate/index.html" class="cert-btn">🎓 修了証を見る</a>
+<script>
+// ===============================
+// 修了証ボタンの表示制御
+// ===============================
+document.addEventListener("DOMContentLoaded", function() {
+  const certButton = document.getElementById("certButton");
+
+  // 公開日時：2026年2月25日20時55分（日本時間）
+  const releaseDate = new Date("2026-02-25T20:55:00+09:00");
+  const now = new Date();
+
+  if (now < releaseDate) {
+    certButton.style.display = "none"; // 非表示
+  } else {
+    certButton.style.display = "inline-block"; // 表示
+  }
+});
+</script>
 
 <footer>
   <p>© 2025 adjustment-lab / Design by H. Nishimoto</p>
