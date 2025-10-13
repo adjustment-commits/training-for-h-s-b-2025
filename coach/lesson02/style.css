@@ -1,0 +1,106 @@
+/* ===============================
+   ADJUSTMENT LAB COACH EDITION｜lesson02
+   =============================== */
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  background: linear-gradient(#0d1117, #1a1a1a);
+  color: #eee;
+  margin: 0;
+  padding: 40px 20px 80px;
+  line-height: 1.8;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+h1 {
+  color: #f28f1b;
+  font-size: 1.5rem;
+  margin-bottom: 0.3em;
+}
+.sub {
+  color: #aaa;
+  font-size: 0.9rem;
+  margin-top: 0;
+}
+
+h2 {
+  color: #d84a4a;
+  font-size: 1.25rem;
+  margin-top: 1.8em;
+}
+
+h3 {
+  color: #f2b33d;
+  margin-top: 1.2em;
+  margin-bottom: 0.4em;
+}
+
+p, li {
+  font-size: 1rem;
+  color: #ddd;
+}
+
+ul {
+  list-style: disc;
+  padding-left: 1.5em;
+  margin-bottom: 1.2em;
+}
+
+/* --- drill box --- */
+article.drill {
+  border: 1px solid #444;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.03);
+  padding: 14px 18px;
+  margin: 16px 0;
+}
+
+.drill h3 {
+  color: #f28f1b;
+  font-size: 1.05rem;
+}
+
+/* --- cue 色分け --- */
+.cue-pelvis { color: #ff4d4d; font-weight: bold; }
+.cue-ground { color: #ffd84d; font-weight: bold; }
+.cue-thorax { color: #4da6ff; font-weight: bold; }
+.cue-box {
+  border: 1px solid #555;
+  border-radius: 6px;
+  padding: 6px 10px;
+  display: inline-block;
+  margin: 10px 0;
+  background: rgba(255,255,255,0.05);
+}
+
+/* --- footer nav --- */
+footer {
+  text-align: center;
+  margin-top: 60px;
+}
+footer a {
+  color: #fff;
+  text-decoration: none;
+  background: #d84a4a;
+  border-radius: 8px;
+  padding: 10px 18px;
+  margin: 5px;
+  display: inline-block;
+  transition: 0.3s;
+}
+footer a:hover {
+  background: #f06161;
+}
+
+/* --- スマホ調整 --- */
+@media (max-width: 600px) {
+  body { padding: 30px 16px 80px; }
+  h1 { font-size: 1.3rem; }
+  h2 { font-size: 1.15rem; }
+  p, li { font-size: 0.95rem; }
+  article.drill { padding: 12px; }
+}
