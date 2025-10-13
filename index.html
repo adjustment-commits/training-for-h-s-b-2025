@@ -24,6 +24,10 @@ h1 {
 p.subtitle {
   color: #ccc;
   margin-bottom: 40px;
+  font-size: 1rem;
+  white-space: nowrap;       /* ← 改行を防止 */
+  overflow: hidden;          /* ← はみ出しを隠す */
+  text-overflow: ellipsis;   /* ← 小さい画面では「…」で省略 */
 }
 .lesson-grid {
   display: grid;
@@ -95,7 +99,7 @@ footer {
 <body>
 
 <h1>ADJUSTMENT LAB</h1>
-<p class="subtitle">高校野球トレーニング2025<br>── 全16回構成 ──</p>
+<p class="subtitle">高校野球の中で、自分を磨く準備。</p>
 
 <div class="lesson-grid">
   <a href="players/lesson01/index.html">第1回 野球動作の再学習</a>
