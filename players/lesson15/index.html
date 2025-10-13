@@ -1,1 +1,125 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第15回｜反応と連動</title>
 
+<!-- ✅ PWA継承 -->
+<link rel="manifest" href="../lesson01/manifest.json">
+<meta name="theme-color" content="#0d1117">
+<link rel="apple-touch-icon" sizes="192x192" href="../lesson01/icons/icon-192.png">
+<link rel="apple-touch-icon" sizes="512x512" href="../lesson01/icons/icon-512.png">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="container">
+
+  <!-- Scene 1 -->
+  <section class="scene active" id="scene1">
+    <h1>第15回｜反応と連動</h1>
+    <p>安定した体を「動きの中」に持ち込む。</p>
+    <p>速さの中で崩れず、リズムを保てるか。<br>
+    それが“反応と連動”の力だ。</p>
+    <button class="next-btn">▶ スタート</button>
+  </section>
+
+  <!-- Scene 2 -->
+  <section class="scene" id="scene2">
+    <h2>反応とは？</h2>
+    <p>「反応」は速さの問題ではない。<br>
+    <strong>“動き出すタイミングを感じ取れる力”</strong>のこと。</p>
+    <p>筋肉ではなく、リズムが反応を作る。</p>
+    <button class="back-btn">◀ 戻る</button>
+    <button class="next-btn">▶ 次へ</button>
+  </section>
+
+  <!-- Scene 3 -->
+  <section class="scene" id="scene3">
+    <h2>体験① 光電管ステップ</h2>
+    <p>光が点いた瞬間に前足で地面を押し出す。</p>
+    <p><strong>「押す」ではなく「タイミングで動く」。</strong><br>
+    反応の速さよりも、リズムの再現性を意識。</p>
+    <p>5回×2セット。</p>
+    <button class="back-btn">◀ 戻る</button>
+    <button class="next-btn">▶ 次へ</button>
+  </section>
+
+  <!-- Scene 4 -->
+  <section class="scene" id="scene4">
+    <h2>体験② バトルロープ・テンポ</h2>
+    <p>ロープを振るテンポを一定に保つ。<br>
+    呼吸とタイミングを合わせ、<br>
+    <strong>「速さの中で崩れない軸」</strong>を体で覚える。</p>
+    <p>30秒×3セット。</p>
+    <button class="back-btn">◀ 戻る</button>
+    <button class="next-btn">▶ 次へ</button>
+  </section>
+
+  <!-- Scene 5 -->
+  <section class="scene" id="scene5">
+    <h2>実践① ラダースライド・フロー</h2>
+    <p>ラダーを横方向にスライドステップ。<br>
+    速さよりも<strong>リズムの安定</strong>を優先。</p>
+    <p>「動いてもブレない」を意識する。</p>
+    <p>3往復×2セット。</p>
+    <button class="back-btn">◀ 戻る</button>
+    <button class="next-btn">▶ 次へ</button>
+  </section>
+
+  <!-- Scene 6 -->
+  <section class="scene" id="scene6">
+    <h2>実践② プライオボックス・リズムジャンプ</h2>
+    <p>一定テンポでステップ台に乗り降りする。<br>
+    <strong>“力を抜く瞬間”をリズムに合わせる。</strong></p>
+    <p>力みを抜くことが反応精度を高める。</p>
+    <p>20秒×3セット。</p>
+    <button class="back-btn">◀ 戻る</button>
+    <button class="next-btn">▶ 次へ</button>
+  </section>
+
+  <!-- Scene 7 -->
+  <section class="scene" id="scene7">
+    <h2>実践③ 反応ドリル・コネクトライン</h2>
+    <p>トレーニングバンドを使い、軽い抵抗下で動く。<br>
+    「骨盤→胸郭→腕」の順番で連動できているか確認。</p>
+    <p><strong>反応とは、順番を守りながら崩れないこと。</strong></p>
+    <p>左右10回×2セット。</p>
+    <button class="back-btn">◀ 戻る</button>
+    <button class="next-btn">▶ 次へ</button>
+  </section>
+
+  <!-- Scene 8 -->
+  <section class="scene" id="scene8">
+    <h2>問い</h2>
+    <p>“速く動く”と“反応する”の違いは？</p>
+    <div class="choices">
+      <button class="choice" data-answer="力で動く">力で動くこと</button>
+      <button class="choice" data-answer="感じて動く">感じて動くこと</button>
+      <button class="choice" data-answer="準備しておく">準備しておくこと</button>
+    </div>
+    <div id="feedback"></div>
+    <button class="back-btn">◀ 戻る</button>
+  </section>
+
+  <!-- Scene 9 -->
+  <section class="scene" id="scene9">
+    <h2>まとめ</h2>
+    <p>反応は速さではない。<br>
+    <strong>タイミングを感じる力。</strong></p>
+    <p>動きながら安定を保つ。<br>
+    それが“反応と連動”の真の意味だ。</p>
+    <p class="end">── 第16回「統合と表現」へ続く ──</p>
+    <div class="nav-buttons">
+      <button class="back-btn">◀ 戻る</button>
+      <a href="../lesson16/index.html" class="next-lesson-btn">▶ 第16回へ</a>
+    </div>
+  </section>
+
+</div>
+
+<script src="../lesson08/main.js"></script>
+</body>
+</html>
