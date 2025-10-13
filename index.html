@@ -19,6 +19,7 @@ body {
   text-align: center;
   padding: 60px 20px;
   line-height: 1.8;
+  position: relative;
 }
 h1 {
   color: #d84a4a;
@@ -39,7 +40,7 @@ ul {
 li {
   margin: 15px 0;
 }
-a {
+a.lesson {
   color: #fff;
   text-decoration: none;
   display: block;
@@ -50,10 +51,35 @@ a {
   transition: 0.3s;
   font-size: 1.05rem;
 }
-a:hover {
+a.lesson:hover {
   background: #d84a4a;
   border-color: #f47b7b;
 }
+
+/* --- 指導者マニュアルボタン --- */
+a.coach-link {
+  position: fixed;
+  right: 14px;
+  bottom: 14px;
+  background: #333;
+  color: #bbb;
+  font-size: 0.8rem;
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: 1px solid #555;
+  text-decoration: none;
+  opacity: 0.6;
+  transition: 0.3s;
+  z-index: 10;
+}
+a.coach-link:hover {
+  opacity: 1;
+  color: #fff;
+  border-color: #888;
+  background: #444;
+}
+
+/* --- Footer --- */
 footer {
   margin-top: 60px;
   font-size: 0.8rem;
@@ -72,11 +98,12 @@ footer {
 <p class="subtitle">高校野球トレーニング2025<br>── すべては順番と伝達から ──</p>
 
 <ul>
-  <li><a href="players/lesson01/index.html">▶ 選手用｜第1回：野球動作の再学習</a></li>
-  <li><a href="players/lesson02/index.html">▶ 選手用｜第2回：力を伝えるとは？</a></li>
-  <li><a href="coach/lesson01/index.html">▶ 講師用｜第1回 指導マニュアル</a></li>
-  <li><a href="coach/lesson02/index.html">▶ 講師用｜第2回 指導マニュアル</a></li>
+  <li><a href="players/lesson01/index.html" class="lesson">▶ 第1回：野球動作の再学習</a></li>
+  <li><a href="players/lesson02/index.html" class="lesson">▶ 第2回：力を伝えるとは？</a></li>
 </ul>
+
+<!-- 指導者マニュアルボタン（小さく右下配置） -->
+<a href="coach/lesson01/index.html" class="coach-link">指導者マニュアル</a>
 
 <footer>
   <p>© 2025 adjustment-lab / Design by H. Nishimoto</p>
