@@ -12,7 +12,34 @@
 <link rel="apple-touch-icon" sizes="512x512" href="icons/icon-512.png">
 
 <style>
-/* --- 共通Lessonボタン --- */
+body {
+  background: linear-gradient(#0d1117, #1a1a1a);
+  color: #fff;
+  font-family: 'Noto Sans JP', sans-serif;
+  text-align: center;
+  padding: 60px 20px;
+  line-height: 1.8;
+  position: relative;
+}
+h1 {
+  color: #d84a4a;
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+}
+p.subtitle {
+  color: #ccc;
+  margin-bottom: 40px;
+  font-size: 1rem;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  max-width: 420px;
+  margin: 0 auto;
+}
+li {
+  margin: 15px 0;
+}
 a.lesson {
   color: #fff;
   text-decoration: none;
@@ -44,34 +71,6 @@ a.lesson:hover {
   }
 }
 
-body {
-  background: linear-gradient(#0d1117, #1a1a1a);
-  color: #fff;
-  font-family: 'Noto Sans JP', sans-serif;
-  text-align: center;
-  padding: 60px 20px;
-  line-height: 1.8;
-}
-h1 {
-  color: #d84a4a;
-  font-size: 1.8rem;
-  margin-bottom: 8px;
-}
-p.subtitle {
-  color: #ccc;
-  margin-bottom: 40px;
-  font-size: 1rem;
-}
-ul {
-  list-style: none;
-  padding: 0;
-  max-width: 420px;
-  margin: 0 auto;
-}
-li {
-  margin: 15px 0;
-}
-
 /* --- 指導者マニュアルボタン --- */
 a.coach-link {
   position: fixed;
@@ -95,6 +94,7 @@ a.coach-link:hover {
   background: #444;
 }
 
+/* --- Footer --- */
 footer {
   margin-top: 60px;
   font-size: 0.8rem;
@@ -107,21 +107,22 @@ footer {
 }
 </style>
 </head>
-
 <body>
+
 <h1>ADJUSTMENT LAB</h1>
-<p class="subtitle">高校野球トレーニング2025<br>── 同じ練習の中でも抜け出す ──</p>
+<p class="subtitle">高校野球トレーニング2025<br>── すべては順番と伝達から ──</p>
 
 <ul>
   <li><a href="players/lesson01/index.html" class="lesson">▶ 第1回：野球動作の再学習</a></li>
   <li><a href="players/lesson02/index.html" class="lesson">▶ 第2回：力を伝えるとは？</a></li>
 </ul>
 
+<!-- 指導者マニュアルボタン（右下控えめ） -->
 <a href="coach/lesson01/index.html" class="coach-link">指導者マニュアル</a>
 
 <footer>
   <p>© 2025 adjustment-lab / Design by H. Nishimoto</p>
-  <p class="version">ver.1.0.0</p>
+  <p class="version">ver.1.0.1</p>
 </footer>
 
 <script>
