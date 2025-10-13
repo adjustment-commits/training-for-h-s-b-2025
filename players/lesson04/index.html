@@ -1,1 +1,130 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第4回｜回旋と反応</title>
 
+<!-- ✅ PWA共通 -->
+<link rel="manifest" href="../../manifest.json">
+<meta name="theme-color" content="#0d1117">
+<link rel="apple-touch-icon" sizes="192x192" href="../../icons/icon-192.png">
+<link rel="apple-touch-icon" sizes="512x512" href="../../icons/icon-512.png">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="container">
+
+  <!-- Scene 1 -->
+  <section class="scene active" id="scene1">
+    <h1>第4回｜回旋と反応</h1>
+    <p>安定の上にあるのは「反応」。<br>
+    ねじれをコントロールできる選手は、いつでも動き出せる。</p>
+    <p>今回は、<strong>骨盤と胸郭の“分離”と“再結合”</strong>を体で覚える。</p>
+    <button class="next-btn">▶ スタート</button>
+  </section>
+
+  <!-- Scene 2 -->
+  <section class="scene" id="scene2">
+    <h2>ねじれとは何か</h2>
+    <p>「回旋」とは、体をひねることではない。<br>
+    <strong>下半身と上半身の“ズレ”を作ること。</strong></p>
+    <p>骨盤と胸郭が別方向に動く時、反動（反応）が生まれる。</p>
+    <button class="back-btn">◀ 戻る</button>
+    <button class="next-btn">▶ 次へ</button>
+  </section>
+
+  <!-- Scene 3 -->
+  <section class="scene" id="scene3">
+    <h2>体験① 分離の感覚</h2>
+    <p>足を肩幅、軽く膝を曲げる。</p>
+    <p>骨盤を右、胸を左へ。逆方向にも。</p>
+    <p><strong>“ねじり”ではなく“ズラす”。</strong><br>どちらかを止め、もう一方を動かす。</p>
+    <button class="back-btn">◀ 戻る</button>
+    <button class="next-btn">▶ 次へ</button>
+  </section>
+
+  <!-- Scene 4 -->
+  <section class="scene" id="scene4">
+    <h2>体験② ねじり戻し</h2>
+    <p>骨盤と胸郭を逆にねじった状態から、<br>
+    <strong>一気に戻す。</strong></p>
+    <p>戻す瞬間、自然に腕が振られる。<br>それが「反応」。</p>
+    <button class="back-btn">◀ 戻る</button>
+    <button class="next-btn">▶ 次へ</button>
+  </section>
+
+  <!-- Scene 5 -->
+  <section class="scene" id="scene5">
+    <h2>実践① プライオボール・ツイスト</h2>
+    <p>軽めのボールを持ち、骨盤と胸を逆方向にねじる。</p>
+    <p><strong>骨盤が先、胸が後。</strong><br>戻す時は胸が追いつく。</p>
+    <p>左右10回×2セット。</p>
+    <button class="back-btn">◀ 戻る</button>
+    <button class="next-btn">▶ 次へ</button>
+  </section>
+
+  <!-- Scene 6 -->
+  <section class="scene" id="scene6">
+    <h2>実践② スライドボード・ツイスト</h2>
+    <p>骨盤を滑らせながら、胸を逆方向に残す。</p>
+    <p>ねじれた反動で、<strong>胸が前へ反応する。</strong></p>
+    <p>10往復。</p>
+    <button class="back-btn">◀ 戻る</button>
+    <button class="next-btn">▶ 次へ</button>
+  </section>
+
+  <!-- Scene 7 -->
+  <section class="scene" id="scene7">
+    <h2>実践③ リアクション・ラダー</h2>
+    <p>ラダーを使い、<strong>左右のねじれ→前への反応</strong>を連動。</p>
+    <p>骨盤→胸→足の順で切り返す。</p>
+    <p>リズムは「止めず・流す」。</p>
+    <button class="back-btn">◀ 戻る</button>
+    <button class="next-btn">▶ 次へ</button>
+  </section>
+
+  <!-- Scene 8 -->
+  <section class="scene" id="scene8">
+    <h2>問い</h2>
+    <p>「反応」を生み出すために大事なのは？</p>
+    <div class="choices">
+      <button class="choice" data-answer="速く動くこと">速く動くこと</button>
+      <button class="choice" data-answer="ねじること">ねじること</button>
+      <button class="choice" data-answer="ズラして戻すこと">ズラして戻すこと</button>
+    </div>
+    <div id="feedback"></div>
+    <button class="back-btn">◀ 戻る</button>
+  </section>
+
+  <!-- Scene 9 -->
+  <section class="scene" id="scene9">
+    <h2>整理と確認</h2>
+    <p>反応は、「ねじれの戻し」から生まれる。<br>
+    速く動かそうとせず、<strong>ズレを作って戻す</strong>。</p>
+    <p>骨盤が先、胸が後。それが“反応の順番”。</p>
+    <button class="back-btn">◀ 戻る</button>
+    <button class="next-btn">▶ 次へ</button>
+  </section>
+
+  <!-- Scene 10 -->
+  <section class="scene" id="scene10">
+    <h2>まとめ</h2>
+    <p>ねじれは“ため”。<br>
+    戻しは“反応”。</p>
+    <p>速くしようとせず、ズラして戻す。<br>
+    それが野球動作のリズムを作る。</p>
+    <p class="end">── 第5回「流れの中の力」へ続く ──</p>
+    <div class="nav-buttons">
+      <button class="back-btn">◀ 戻る</button>
+      <a href="../lesson05/index.html" class="next-lesson-btn">▶ 第5回へ</a>
+    </div>
+  </section>
+
+</div>
+
+<script src="./main.js"></script>
+</body>
+</html>
