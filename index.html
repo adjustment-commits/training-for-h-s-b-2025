@@ -3,135 +3,126 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>高校野球トレーニング2025｜ADJUSTMENT LAB</title>
-
-<!-- ✅ PWA設定 -->
-<link rel="manifest" href="manifest.json">
+<title>ADJUSTMENT LAB｜高校野球トレーニング2025</title>
+<link rel="manifest" href="players/lesson01/manifest.json">
 <meta name="theme-color" content="#0d1117">
-<link rel="apple-touch-icon" sizes="192x192" href="icons/icon-192.png">
-<link rel="apple-touch-icon" sizes="512x512" href="icons/icon-512.png">
-
+<link rel="apple-touch-icon" sizes="192x192" href="players/lesson01/icons/icon-192.png">
+<link rel="apple-touch-icon" sizes="512x512" href="players/lesson01/icons/icon-512.png">
 <style>
 body {
-  background: linear-gradient(#0d1117, #1a1a1a);
+  background: #0d1117;
   color: #fff;
   font-family: 'Noto Sans JP', sans-serif;
   text-align: center;
   padding: 60px 20px;
   line-height: 1.8;
-  position: relative;
 }
 h1 {
   color: #d84a4a;
-  font-size: 1.8rem;
   margin-bottom: 8px;
 }
 p.subtitle {
   color: #ccc;
   margin-bottom: 40px;
-  font-size: 1rem;
 }
-ul {
-  list-style: none;
-  padding: 0;
-  max-width: 420px;
-  margin: 0 auto;
+.lesson-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 14px;
+  max-width: 680px;
+  margin: 0 auto 40px;
 }
-li {
-  margin: 15px 0;
-}
-a.lesson {
-  color: #fff;
-  text-decoration: none;
+.lesson-grid a {
   display: block;
   background: #1c2433;
-  padding: 16px 20px;
-  border-radius: 10px;
   border: 2px solid #d84a4a;
+  border-radius: 10px;
+  padding: 16px 12px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.95rem;
   transition: 0.3s;
-  font-size: 1.05rem;
-  max-width: 420px;
-  margin: 0 auto;
 }
-a.lesson:hover {
+.lesson-grid a:hover {
   background: #d84a4a;
   border-color: #f47b7b;
+  transform: scale(1.02);
 }
-
-/* --- スマホ調整 --- */
-@media (max-width: 480px) {
-  a.lesson {
-    font-size: 0.93rem;
-    padding: 12px 14px;
-    max-width: 90vw;
-    line-height: 1.4;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
+.lesson-grid a.active {
+  background: #f87171;
+  color: #0d1117;
+  font-weight: bold;
 }
-
-/* --- 指導者マニュアルボタン --- */
-a.coach-link {
-  position: fixed;
-  right: 14px;
-  bottom: 14px;
-  background: #333;
-  color: #bbb;
-  font-size: 0.8rem;
-  padding: 8px 14px;
-  border-radius: 8px;
-  border: 1px solid #555;
+.coach-link {
+  display: inline-block;
+  margin-top: 30px;
+  background: #1e293b;
+  color: #e2e8f0;
   text-decoration: none;
-  opacity: 0.6;
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: 1px solid #475569;
+  font-size: 0.9rem;
   transition: 0.3s;
-  z-index: 10;
 }
-a.coach-link:hover {
-  opacity: 1;
+.coach-link:hover {
+  background: #334155;
   color: #fff;
-  border-color: #888;
-  background: #444;
 }
-
-/* --- Footer --- */
 footer {
   margin-top: 60px;
   font-size: 0.8rem;
   color: #777;
 }
-.version {
-  color: #555;
-  font-size: 0.8rem;
-  margin-top: 10px;
+.cert-btn {
+  display: inline-block;
+  margin-top: 40px;
+  background: linear-gradient(90deg, #facc15, #f87171);
+  color: #0d1117;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  transition: 0.3s;
+  box-shadow: 0 0 15px rgba(255,255,255,0.3);
+}
+.cert-btn:hover {
+  background: linear-gradient(90deg, #f87171, #facc15);
+  transform: scale(1.03);
 }
 </style>
 </head>
 <body>
 
 <h1>ADJUSTMENT LAB</h1>
-<p class="subtitle">高校野球トレーニング2025<br>── すべては順番と伝達から ──</p>
+<p class="subtitle">高校野球トレーニング2025<br>── 全16回構成 ──</p>
 
-<ul>
-  <li><a href="players/lesson01/index.html" class="lesson">▶ 第1回：野球動作の再学習</a></li>
-  <li><a href="players/lesson02/index.html" class="lesson">▶ 第2回：力を伝えるとは？</a></li>
-</ul>
+<div class="lesson-grid">
+  <a href="players/lesson01/index.html">第1回 野球動作の再学習</a>
+  <a href="players/lesson02/index.html">第2回 力を伝えるとは？</a>
+  <a href="players/lesson03/index.html">第3回 安定と軸</a>
+  <a href="players/lesson04/index.html">第4回 回旋と反応</a>
+  <a href="players/lesson05/index.html">第5回 下半身のタイミング</a>
+  <a href="players/lesson06/index.html">第6回 グラウンド反力</a>
+  <a href="players/lesson07/index.html">第7回 骨盤の滑走</a>
+  <a href="players/lesson08/index.html">第8回 冬モードへの切り替え</a>
+  <a href="players/lesson09/index.html">第9回 下肢と体幹の共鳴</a>
+  <a href="players/lesson10/index.html">第10回 呼吸と安定</a>
+  <a href="players/lesson11/index.html">第11回 ストライドと方向性</a>
+  <a href="players/lesson12/index.html">第12回 回旋速度の獲得</a>
+  <a href="players/lesson13/index.html">第13回 グラウンド感覚の深化</a>
+  <a href="players/lesson14/index.html">第14回 安定の再構築</a>
+  <a href="players/lesson15/index.html">第15回 反応と連動</a>
+  <a href="players/lesson16/index.html">第16回 統合と表現</a>
+</div>
 
-<!-- 指導者マニュアルボタン（右下控えめ） -->
-<a href="coach/lesson01/index.html" class="coach-link">指導者マニュアル</a>
+<a href="coach/lesson01/index.html" class="coach-link">▶ 指導者マニュアルへ</a>
+
+<a href="certificate/index.html" class="cert-btn">🎓 修了証を見る</a>
 
 <footer>
   <p>© 2025 adjustment-lab / Design by H. Nishimoto</p>
-  <p class="version">ver.1.0.1</p>
 </footer>
-
-<script>
-if ("serviceWorker" in navigator) {
-  window.addEventListener("load", () => {
-    navigator.serviceWorker.register("service-worker.js");
-  });
-}
-</script>
 
 </body>
 </html>
