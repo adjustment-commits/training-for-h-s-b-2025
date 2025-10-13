@@ -1,95 +1,98 @@
-// ============================================
-// ADJUSTMENT LAB｜冬モード main.js
-// 寒冷地トレーニング専用：Lesson08〜12共通
-// ============================================
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第8回 講師用｜安定と流動（冬モード）</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-document.addEventListener("DOMContentLoaded", () => {
-  const scenes = document.querySelectorAll(".scene");
-  let currentScene = 0;
+<div id="container">
 
-  // --- シーン切り替え ---
-  function showScene(index) {
-    scenes.forEach((scene, i) => {
-      scene.classList.toggle("active", i === index);
-    });
-  }
+  <header>
+    <h1>第8回｜安定と流動（冬モード）</h1>
+    <p class="sub">寒冷下での体幹制御と動的安定の育成</p>
+  </header>
 
-  // --- 「次へ」ボタン ---
-  document.querySelectorAll(".next-btn").forEach(btn => {
-    btn.addEventListener("click", () => {
-      if (currentScene < scenes.length - 1) {
-        currentScene++;
-        showScene(currentScene);
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      }
-    });
-  });
+  <section>
+    <h2>指導テーマ</h2>
+    <p>・固める安定ではなく、流れの中で支える安定を育てる。<br>
+    ・寒さを理由に止めない。止めれば神経も冷える。</p>
+  </section>
 
-  // --- 「戻る」ボタン ---
-  document.querySelectorAll(".back-btn").forEach(btn => {
-    btn.addEventListener("click", () => {
-      if (currentScene > 0) {
-        currentScene--;
-        showScene(currentScene);
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      }
-    });
-  });
+  <section>
+    <h2>環境条件（富山冬期）</h2>
+    <ul>
+      <li>気温：5〜10℃、床冷感あり。</li>
+      <li>19:30〜21:00（体温下降時間帯）。</li>
+      <li>全員シューズ着用。静止時間は最大90秒以内。</li>
+      <li>体が冷えやすい選手にはバンド動作を優先配置。</li>
+    </ul>
+  </section>
 
-  // --- クイズ判定（寒冷地ver） ---
-  const feedback = document.getElementById("feedback");
-  const choices = document.querySelectorAll(".choice");
+  <section>
+    <h2>トレーニング構成（全体90分）</h2>
+    <table>
+      <tr><th>時間</th><th>内容</th><th>狙い</th></tr>
+      <tr><td>0〜10分</td><td>ラダー＋ステップ台リズムサーキット</td><td>体温上昇よりも神経起動を優先。</td></tr>
+      <tr><td>10〜25分</td><td>デッドバグ（流動安定ver）</td><td>呼吸と四肢連動のタイミング教育。</td></tr>
+      <tr><td>25〜45分</td><td>スライドボード・クロスステップ</td><td>骨盤主導＋支点意識の定着。</td></tr>
+      <tr><td>45〜65分</td><td>バランスパッド・片脚ローテーション</td><td>動作の中で軸を見失わない安定性。</td></tr>
+      <tr><td>65〜80分</td><td>TRX／バンド・抗重力リーチ</td><td>全身連動＋呼吸維持の統合練習。</td></tr>
+      <tr><td>80〜90分</td><td>整理＋質問タイム</td><td>冷却前に内省を促し神経学習を定着。</td></tr>
+    </table>
+  </section>
 
-  if (choices.length > 0 && feedback) {
-    choices.forEach(choice => {
-      choice.addEventListener("click", () => {
-        const answer = choice.dataset.answer;
+  <section>
+    <h2>指導ポイント</h2>
+    <ul>
+      <li><strong>止まる時間を作らない：</strong>見せる時も全員が動作維持。</li>
+      <li><strong>骨盤から動きを始めさせる：</strong>冷えた下半身を最優先で目覚めさせる。</li>
+      <li><strong>呼吸 cue：</strong>「吐きながら支える」「吸って広げる」を声でリズム化。</li>
+      <li><strong>床との会話：</strong>冷たい床は“力の通り道”を意識させる最高の教材。</li>
+      <li><strong>感覚共有：</strong>「冷たさを感じた＝動きが止まってる」合図として扱う。</li>
+    </ul>
+  </section>
 
-        // --- 判定とコメント ---
-        if (answer === "動きながら支えること") {
-          feedback.textContent = "正解。寒さの中で動ける選手は、芯が熱い。";
-          feedback.style.color = "#f87171";
-        } else if (answer === "動かないこと") {
-          feedback.textContent = "違う。止まると冷える、筋肉も神経も眠る。";
-          feedback.style.color = "#94a3b8";
-        } else if (answer === "固めること") {
-          feedback.textContent = "惜しい。固めた瞬間、熱も流れも止まる。";
-          feedback.style.color = "#facc15";
-        } else {
-          feedback.textContent = "感じて選べ。それが一番のトレーニングだ。";
-          feedback.style.color = "#fcd34d";
-        }
+  <section>
+    <h2>エクササイズ詳細</h2>
+    <ol>
+      <li>
+        <strong>デッドバグ（流動安定ver）</strong><br>
+        反対の手足を動かしながら呼吸を止めない。<br>
+        体幹が温まり、腹圧で熱を内側に保つ。
+      </li>
+      <li>
+        <strong>スライドボード・クロスステップ</strong><br>
+        骨盤→胸→腕の順に流す。<br>
+        足裏の摩擦感覚を「熱の通り道」として説明。
+      </li>
+      <li>
+        <strong>バランスパッド・片脚ローテーション</strong><br>
+        胸郭だけをひねる。軸足の熱を逃さない意識を持たせる。
+      </li>
+      <li>
+        <strong>TRX／バンド・抗重力リーチ</strong><br>
+        倒れるのではなく「支えながら伸びる」。<br>
+        冬期に失われがちな背面連鎖の再教育。
+      </li>
+    </ol>
+  </section>
 
-        // --- “次へ”ボタン自動生成 ---
-        const nextBtn = document.createElement("button");
-        nextBtn.textContent = "▶ 次へ";
-        nextBtn.classList.add("next-btn");
-        nextBtn.style.marginTop = "20px";
+  <section>
+    <h2>伝え方の哲学</h2>
+    <blockquote>
+      冬は「我慢」ではなく「整流」だ。<br>
+      冷たさの中でも動ける体は、温かい季節に強い。
+    </blockquote>
+  </section>
 
-        const existing = feedback.nextElementSibling;
-        if (!existing || !existing.classList.contains("next-btn")) {
-          feedback.after(nextBtn);
-          nextBtn.addEventListener("click", () => {
-            if (currentScene < scenes.length - 1) {
-              currentScene++;
-              showScene(currentScene);
-              window.scrollTo({ top: 0, behavior: "smooth" });
-            }
-          });
-        }
-      });
-    });
-  }
+  <footer>
+    <p>© 2025 adjustment-lab｜Coach Manual Lesson08</p>
+  </footer>
 
-  // --- 初期シーン表示 ---
-  showScene(currentScene);
+</div>
 
-  // --- 冬季アクティベーション演出 ---
-  const body = document.body;
-  body.style.transition = "background 1s ease";
-  setInterval(() => {
-    body.style.background = body.style.background.includes("#0d1117")
-      ? "linear-gradient(180deg, #1a0f0f, #3b1c1c)"
-      : "linear-gradient(180deg, #0d1117, #321b1b)";
-  }, 8000);
-});
+</body>
+</html>
