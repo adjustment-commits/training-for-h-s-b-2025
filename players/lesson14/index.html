@@ -1,1 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第14回｜安定と再現性</title>
 
+<!-- ✅ PWA継承 -->
+<link rel="manifest" href="../lesson01/manifest.json">
+<meta name="theme-color" content="#0d1117">
+<link rel="apple-touch-icon" sizes="192x192" href="../lesson01/icons/icon-192.png">
+<link rel="apple-touch-icon" sizes="512x512" href="../lesson01/icons/icon-512.png">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="container">
+
+  <!-- Scene 1 -->
+  <section class="scene active" id="scene1">
+    <h1>第14回｜安定と再現性</h1>
+    <p>「力の方向」を掴んだら、次はその方向を<br>
+    いつでも再現できるようにする。</p>
+    <p>安定とは“止まること”ではなく、<br>
+    <strong>“戻れること”。</strong></p>
+    <button class="next-btn">▶ スタート</button>
+  </section>
+
+  <!-- Scene 2 -->
+  <section class="scene" id="scene2">
+    <h2>安定とは？</h2>
+    <p>バランスを取ることではなく、<br>崩れても戻れること。</p>
+    <p>それを支えるのは「骨盤と胸郭の対話」。</p>
+    <p><strong>“ズレても戻せる構造”</strong>が、安定の正体だ。</p>
+    <button class="back-btn">◀ 戻る</button>
+    <button class="next-btn">▶ 次へ</button>
+  </section>
+
+  <!-- Scene 3 -->
+  <section class="scene" id="scene3">
+    <h2>体験① バランスボール・リターン</h2>
+    <p>ボールに座り、軽く体を傾けて戻す。</p>
+    <p>ポイントは、<strong>戻す力を「中心に集める」こと。</strong></p>
+    <p>10回×2セット。</p>
+    <button class="back-btn">◀ 戻る</button>
+    <button class="next-btn">▶ 次へ</button>
+  </section>
+
+  <!-- Scene 4 -->
+  <section class="scene" id="scene4">
+    <h2>体験② 骨盤ロック → 胸郭リリース</h2>
+    <p>骨盤を安定させたまま、胸だけを動かす。<br>
+    胸を動かすことで“中心を守る”感覚を得る。</p>
+    <p>10回×2セット。</p>
+    <button class="back-btn">◀ 戻る</button>
+    <button class="next-btn">▶ 次へ</button>
+  </section>
+
+  <!-- Scene 5 -->
+  <section class="scene" id="scene5">
+    <h2>実践① TRX・コアリターン</h2>
+    <p>体幹を固定しながら、脚を交互に引き戻す。<br>
+    <strong>「戻すスピード」＝安定の精度。</strong></p>
+    <p>片脚10回×2セット。</p>
+    <button class="back-btn">◀ 戻る</button>
+    <button class="next-btn">▶ 次へ</button>
+  </section>
+
+  <!-- Scene 6 -->
+  <section class="scene" id="scene6">
+    <h2>実践② メディシンボール・リバウンド</h2>
+    <p>胸の前でボールを軽く押し出し、受け取る。<br>
+    “押す力”ではなく、“戻す力”を意識。</p>
+    <p>10回×2セット。</p>
+    <button class="back-btn">◀ 戻る</button>
+    <button class="next-btn">▶ 次へ</button>
+  </section>
+
+  <!-- Scene 7 -->
+  <section class="scene" id="scene7">
+    <h2>実践③ ヒップリターン・ドリル</h2>
+    <p>骨盤を前方へスライド → 戻す。<br>
+    <strong>前後の切り替えで“中心の速さ”を育てる。</strong></p>
+    <p>10回×2セット。</p>
+    <button class="back-btn">◀ 戻る</button>
+    <button class="next-btn">▶ 次へ</button>
+  </section>
+
+  <!-- Scene 8 -->
+  <section class="scene" id="scene8">
+    <h2>問い</h2>
+    <p>「安定している」とは、どんな状態だと思う？</p>
+    <div class="choices">
+      <button class="choice" data-answer="動かないこと">動かないこと</button>
+      <button class="choice" data-answer="戻れること">戻れること</button>
+      <button class="choice" data-answer="強く支えること">強く支えること</button>
+    </div>
+    <div id="feedback"></div>
+    <button class="back-btn">◀ 戻る</button>
+  </section>
+
+  <!-- Scene 9 -->
+  <section class="scene" id="scene9">
+    <h2>まとめ</h2>
+    <p>安定は止まることではない。<br>
+    <strong>揺れても、戻れること。</strong></p>
+    <p>力の再現性は、ブレの中で生まれる。</p>
+    <p class="end">── 第15回「出力の再現性」へ続く ──</p>
+    <div class="nav-buttons">
+      <button class="back-btn">◀ 戻る</button>
+      <a href="../lesson15/index.html" class="next-lesson-btn">▶ 第15回へ</a>
+    </div>
+  </section>
+
+</div>
+
+<script src="../lesson08/main.js"></script>
+</body>
+</html>
