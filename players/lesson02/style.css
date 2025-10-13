@@ -151,3 +151,34 @@ button:hover, a.next-lesson-btn:hover {
   button { font-size: 0.95rem; padding: 8px 14px; }
   .diagram.motion svg { max-width: 90%; margin: 8px auto; }
 }
+/* ===============================
+   cue 色分けガイド（コーチ専用補助）
+   =============================== */
+
+/* 骨盤（赤） */
+.cue-pelvis {
+  color: #ff4d4d;
+  font-weight: bold;
+}
+
+/* 地面反力・足裏（黄） */
+.cue-ground {
+  color: #ffd84d;
+  font-weight: bold;
+}
+
+/* 胸郭（青） */
+.cue-thorax {
+  color: #4da6ff;
+  font-weight: bold;
+}
+
+/* cueテキスト強調枠 */
+.cue-box {
+  border: 2px solid #666;
+  border-radius: 6px;
+  padding: 6px 10px;
+  margin: 10px auto;
+  display: inline-block;
+  background: rgba(255,255,255,0.05);
+}
