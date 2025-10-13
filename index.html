@@ -146,22 +146,28 @@ document.getElementById("coachLink").addEventListener("click", function (event) 
 });
 </script>
 
-<a href="certificate/index.html" class="cert-btn">🎓 修了証を見る</a>
+<a href="certificate/index.html" class="cert-btn" id="certButton" style="display:none;">🎓 修了証を見る</a>
+
+<p id="certPlaceholder" style="color:#666;">🎓 COMING SOON...</p>
+
 <script>
 // ===============================
-// 修了証ボタンの表示制御
+// 修了証ボタンの公開日時制御
 // ===============================
 document.addEventListener("DOMContentLoaded", function() {
   const certButton = document.getElementById("certButton");
+  const certPlaceholder = document.getElementById("certPlaceholder");
 
-  // 公開日時：2026年2月25日20時55分（日本時間）
+  // 公開日時：2026年2月25日 20:55（日本時間）
   const releaseDate = new Date("2026-02-25T20:55:00+09:00");
   const now = new Date();
 
-  if (now < releaseDate) {
-    certButton.style.display = "none"; // 非表示
+  if (now >= releaseDate) {
+    certButton.style.display = "inline-block";  // 表示
+    certPlaceholder.style.display = "none";     // COMING SOONを消す
   } else {
-    certButton.style.display = "inline-block"; // 表示
+    certButton.style.display = "none";          // 非表示
+    certPlaceholder.style.display = "block";    // COMING SOONを表示
   }
 });
 </script>
