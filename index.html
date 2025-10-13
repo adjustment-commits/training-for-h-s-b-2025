@@ -121,7 +121,27 @@ footer {
   <a href="players/lesson16/index.html">第16回 統合と表現</a>
 </div>
 
-<a href="coach/lesson01/index.html" class="coach-link">▶ 指導者マニュアルへ</a>
+<a href="#" id="coachLink" class="coach-link">▶ ADJ COACHING MAP</a>
+
+<script>
+// ===============================
+// ADJ COACHING MAP パスワード制御
+// ===============================
+document.getElementById("coachLink").addEventListener("click", function (event) {
+  event.preventDefault(); // 通常のリンク動作を停止
+  const pass = prompt("【ADJ COACHING MAP】\nアクセスパスワードを入力してください：");
+  
+  const correctPass = "adjhrsnsmt"; // ✅ パスワード
+
+  if (pass === correctPass) {
+    window.location.href = "coach/lesson01/index.html";
+  } else if (pass === null) {
+    return;
+  } else {
+    alert("パスワードが違います。");
+  }
+});
+</script>
 
 <a href="certificate/index.html" class="cert-btn">🎓 修了証を見る</a>
 <script>
