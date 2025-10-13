@@ -128,18 +128,35 @@ blockquote {
 }
 
 .coach-note {
-  background: #f5f5f5;
+  background: #f9fafb;             /* 明るめの背景に変更 */
+  color: #111;                     /* 文字を濃いグレーに */
   padding: 20px;
   margin: 40px 0;
-  border-left: 6px solid #444;
-  border-radius: 4px;
+  border-left: 6px solid #3498db;  /* ブルーでアクセント */
+  border-radius: 6px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
 }
-.coach-note h2 { margin-top: 0; }
+
+.coach-note h2 {
+  margin-top: 0;
+  color: #2979ff;
+  font-weight: 700;
+}
+
+.coach-note p,
+.coach-note ul,
 .coach-note blockquote {
-  background: #fff;
+  color: #222;                     /* 本文を明確に見える濃さに */
+  line-height: 1.7;
+}
+
+.coach-note blockquote {
+  background: #eef6ff;             /* 合言葉を淡い青帯で強調 */
+  border-left: 4px solid #2979ff;
   padding: 10px 15px;
-  border-left: 4px solid #999;
   font-style: italic;
+  color: #0d47a1;
+  border-radius: 4px;
 }
 
 /* --- Footer --- */
