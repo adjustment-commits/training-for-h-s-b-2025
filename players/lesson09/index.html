@@ -1,1 +1,125 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第9回｜動きの再現性</title>
 
+<!-- ✅ PWA継承 -->
+<link rel="manifest" href="../lesson01/manifest.json">
+<meta name="theme-color" content="#0d1117">
+<link rel="apple-touch-icon" sizes="192x192" href="../lesson01/icons/icon-192.png">
+<link rel="apple-touch-icon" sizes="512x512" href="../lesson01/icons/icon-512.png">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="container">
+
+  <!-- Scene 1 -->
+  <section class="scene active" id="scene1">
+    <h1>第9回｜動きの再現性</h1>
+    <p>どんな環境でも“同じ動き”ができること。<br>
+    それが冬を越える選手の条件だ。</p>
+    <p>今回は「ズレをなくす」「同じ動きを作る」に集中する。</p>
+    <button class="next-btn">▶ スタート</button>
+  </section>
+
+  <!-- Scene 2 -->
+  <section class="scene" id="scene2">
+    <h2>再現性とは何か</h2>
+    <p>力を出すことじゃない。<br>
+    「同じ力を同じタイミングで出すこと」だ。</p>
+    <p>フォームを覚えるのではなく、<br>
+    “動きの条件”を体に刻む。</p>
+    <button class="back-btn">◀ 戻る</button>
+    <button class="next-btn">▶ 次へ</button>
+  </section>
+
+  <!-- Scene 3 -->
+  <section class="scene" id="scene3">
+    <h2>体験① 呼吸テンポの再現</h2>
+    <p>鼻で吸い、口で吐く。<br>3秒吸って、3秒吐く。</p>
+    <p>動きのリズムを呼吸と同期させる。<br>
+    呼吸が乱れたら、再現性も乱れる。</p>
+    <p>10呼吸 × 2セット。</p>
+    <button class="back-btn">◀ 戻る</button>
+    <button class="next-btn">▶ 次へ</button>
+  </section>
+
+  <!-- Scene 4 -->
+  <section class="scene" id="scene4">
+    <h2>体験② 骨盤の軌道</h2>
+    <p>スライドボード or ラダー上で、<br>
+    骨盤を左右に流しながらリズムを保つ。</p>
+    <p>「1・2・3・戻る」<br>
+    どの回も同じテンポ・同じ範囲。</p>
+    <p>骨盤を“メトロノーム”にする。</p>
+    <button class="back-btn">◀ 戻る</button>
+    <button class="next-btn">▶ 次へ</button>
+  </section>
+
+  <!-- Scene 5 -->
+  <section class="scene" id="scene5">
+    <h2>実践① プライオボックス・テンポジャンプ</h2>
+    <p>45cm・50cm・60cm面を使って連続ジャンプ。<br>
+    目標は「高さ」ではなく「リズムの再現」。</p>
+    <p><strong>テンポ＝リズム×呼吸×着地音</strong></p>
+    <p>各面5回×2周。</p>
+    <button class="back-btn">◀ 戻る</button>
+    <button class="next-btn">▶ 次へ</button>
+  </section>
+
+  <!-- Scene 6 -->
+  <section class="scene" id="scene6">
+    <h2>実践② バトルロープ・リズムドライブ</h2>
+    <p>10秒間全力 → 10秒静止 → 10秒再開。<br>
+    3サイクル繰り返す。</p>
+    <p>揺らすテンポ・力感を一定に保つ。<br>
+    「初動の勢い」よりも「安定の持続」。</p>
+    <button class="back-btn">◀ 戻る</button>
+    <button class="next-btn">▶ 次へ</button>
+  </section>
+
+  <!-- Scene 7 -->
+  <section class="scene" id="scene7">
+    <h2>実践③ バランスボール・クロスヒップドリル</h2>
+    <p>仰向けでバランスボールを脚で支える。<br>
+    片脚を交互に上げ下げしながら骨盤を水平に保つ。</p>
+    <p>どんな環境でも“揺れずに動ける”ことが再現性。</p>
+    <p>左右10回×2セット。</p>
+    <button class="back-btn">◀ 戻る</button>
+    <button class="next-btn">▶ 次へ</button>
+  </section>
+
+  <!-- Scene 8 -->
+  <section class="scene" id="scene8">
+    <h2>問い</h2>
+    <p>動きを毎回同じにするために、何が一番大事だと思う？</p>
+    <div class="choices">
+      <button class="choice" data-answer="力を出すこと">力を出すこと</button>
+      <button class="choice" data-answer="呼吸とリズムを整えること">呼吸とリズムを整えること</button>
+      <button class="choice" data-answer="速く動くこと">速く動くこと</button>
+    </div>
+    <div id="feedback"></div>
+    <button class="back-btn">◀ 戻る</button>
+  </section>
+
+  <!-- Scene 9 -->
+  <section class="scene" id="scene9">
+    <h2>まとめ</h2>
+    <p>再現性とは「同じ感覚を呼び起こす力」。<br>
+    それを寒い環境で鍛えた選手は、試合でも崩れない。</p>
+    <p class="end">── 第10回「集中と分離」へ続く ──</p>
+    <div class="nav-buttons">
+      <button class="back-btn">◀ 戻る</button>
+      <a href="../lesson10/index.html" class="next-lesson-btn">▶ 第10回へ</a>
+    </div>
+  </section>
+
+</div>
+
+<script src="../lesson08/main.js"></script>
+</body>
+</html>
