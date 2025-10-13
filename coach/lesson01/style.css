@@ -188,3 +188,41 @@ footer a:hover {
   p, li, blockquote { font-size: 0.95rem; }
   table, th, td { font-size: 0.9rem; }
 }
+/* ---- Coach Note の可読性パッチ（強制上書き） ---- */
+.coach-note { background:#f9fafb; color:#111; }
+
+/* 本文色を強制反映（既存の弱い半透明色を無効化） */
+.coach-note h2,
+.coach-note p,
+.coach-note ul,
+.coach-note li,
+.coach-note blockquote {
+  color:#222 !important;
+  opacity:1 !important;
+  mix-blend-mode:normal !important;
+}
+
+/* リストの見栄え（Safari対策含む） */
+.coach-note ul {
+  list-style:disc;
+  padding-left:1.2em;
+  margin:0.6em 0;
+}
+.coach-note li { line-height:1.7; }
+
+/* マーカー色（●）も指定して視認性アップ（iOS Safari対応） */
+.coach-note li::marker {
+  color:#2979ff;         /* アクセントカラー */
+  opacity:1;
+}
+
+/* 引用の強調 */
+.coach-note blockquote {
+  background:#eef6ff;
+  border-left:4px solid #2979ff;
+  padding:10px 15px;
+  border-radius:4px;
+  font-style:italic;
+}
+/* 見出しのアクセント */
+.coach-note h2 { color:#2979ff !important; font-weight:700; }
