@@ -1,0 +1,153 @@
+/* ===============================
+   ADJUSTMENT LAB｜第2回 力を伝えるとは？
+   =============================== */
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  background: linear-gradient(#0d1117, #1a2535);
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+#container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.scene {
+  display: none;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  max-width: 720px;
+  padding: 24px;
+}
+
+.scene.active {
+  display: block;
+  opacity: 1;
+}
+
+h1, h2 {
+  color: #f28f1b;
+  margin-bottom: 0.6em;
+}
+
+h1 {
+  font-size: 1.6rem;
+}
+
+h2 {
+  font-size: 1.35rem;
+  margin-top: 1.2em;
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1em;
+}
+
+/* --- ボタン --- */
+button, a.next-lesson-btn {
+  background: #d84a4a;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 18px;
+  font-size: 1rem;
+  margin: 10px 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+button:hover, a.next-lesson-btn:hover {
+  background: #f06161;
+}
+
+/* --- 戻るボタン固定（スマホ操作向け） --- */
+.back-btn {
+  background: #333;
+  color: #ddd;
+  border: 1px solid #555;
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  opacity: 0.8;
+  z-index: 20;
+}
+.back-btn:hover {
+  opacity: 1;
+}
+
+/* --- 次のレッスンボタン --- */
+.next-lesson-btn {
+  background: #f28f1b;
+  color: #fff;
+  border: 1px solid #f28f1b;
+}
+
+/* --- クイズ --- */
+.choices {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+.choice {
+  background: #1c2433;
+  border: 1px solid #d84a4a;
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 6px;
+}
+.choice:hover {
+  background: #d84a4a;
+}
+#feedback {
+  margin-top: 20px;
+  font-size: 1.1rem;
+}
+
+/* --- SVGアニメーション --- */
+.diagram.motion svg {
+  width: 100%;
+  max-width: 600px;
+  margin: 10px auto;
+  display: block;
+}
+.flowline {
+  stroke-dasharray: 6 6;
+  animation: flow 2s linear infinite;
+}
+@keyframes flow {
+  from { stroke-dashoffset: 0; }
+  to { stroke-dashoffset: 12; }
+}
+.pulse {
+  animation: pulse 1.2s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%, 100% { stroke-width: 3; filter: brightness(1); }
+  50% { stroke-width: 6; filter: brightness(1.4); }
+}
+
+/* --- スマホ対応 --- */
+@media (max-width: 600px) {
+  h1 { font-size: 1.35rem; }
+  h2 { font-size: 1.2rem; }
+  p { font-size: 1rem; line-height: 1.7; }
+  button { font-size: 0.95rem; padding: 8px 14px; }
+  .diagram.motion svg { max-width: 90%; margin: 8px auto; }
+}
