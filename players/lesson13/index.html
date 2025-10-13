@@ -1,1 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第13回｜出力と方向性</title>
 
+<!-- ✅ PWA継承 -->
+<link rel="manifest" href="../lesson01/manifest.json">
+<meta name="theme-color" content="#0d1117">
+<link rel="apple-touch-icon" sizes="192x192" href="../lesson01/icons/icon-192.png">
+<link rel="apple-touch-icon" sizes="512x512" href="../lesson01/icons/icon-512.png">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="container">
+
+  <!-- Scene 1 -->
+  <section class="scene active" id="scene1">
+    <h1>第13回｜出力と方向性</h1>
+    <p>これまで「流す」ことを学んできた。<br>
+    今日はその流れを“どこに放つか”を考える。</p>
+    <p>力はただ出すものではない。<br>
+    <strong>「方向を持った出力」</strong>が、本当の強さを生む。</p>
+    <button class="next-btn">▶ スタート</button>
+  </section>
+
+  <!-- Scene 2 -->
+  <section class="scene" id="scene2">
+    <h2>出力とは？</h2>
+    <p>力（Force）＝ 質量 × 加速度。<br>
+    でも、野球では「方向」がなければ意味がない。</p>
+    <p>力の方向＝意識ではなく、構造で決まる。</p>
+    <p><strong>“どこへ押しているか”が、すべてを決める。</strong></p>
+    <button class="back-btn">◀ 戻る</button>
+    <button class="next-btn">▶ 次へ</button>
+  </section>
+
+  <!-- Scene 3 -->
+  <section class="scene" id="scene3">
+    <h2>実践① ステッププッシュ</h2>
+    <p>20cm程度のステップ台を使う。<br>
+    足で「上」ではなく「前」に押す。</p>
+    <p>骨盤が前に流れ、胸は追いかける。<br>
+    <strong>踏む方向＝出力の方向。</strong></p>
+    <p>左右10回×2セット。</p>
+    <button class="back-btn">◀ 戻る</button>
+    <button class="next-btn">▶ 次へ</button>
+  </section>
+
+  <!-- Scene 4 -->
+  <section class="scene" id="scene4">
+    <h2>実践② メディシンボール・スロー</h2>
+    <p>体の回転でボールを投げる。<br>
+    「回す」ではなく「押し出す」。</p>
+    <p>骨盤→胸→腕の順で力を前へ流す。</p>
+    <p><strong>方向を決めるのは腕ではなく骨盤。</strong></p>
+    <p>片側×10回×2セット。</p>
+    <button class="back-btn">◀ 戻る</button>
+    <button class="next-btn">▶ 次へ</button>
+  </section>
+
+  <!-- Scene 5 -->
+  <section class="scene" id="scene5">
+    <h2>実践③ バトルロープ・ターン</h2>
+    <p>ロープを左右に振るのではなく、<br>
+    <strong>軸を中心に波を返す。</strong></p>
+    <p>骨盤を支点に、上体が“向きを変える”感覚を掴む。</p>
+    <p>左右20秒×2セット。</p>
+    <button class="back-btn">◀ 戻る</button>
+    <button class="next-btn">▶ 次へ</button>
+  </section>
+
+  <!-- Scene 6 -->
+  <section class="scene" id="scene6">
+    <h2>問い</h2>
+    <p>君の“力の方向”はどこにある？</p>
+    <div class="choices">
+      <button class="choice" data-answer="上">上</button>
+      <button class="choice" data-answer="前">前</button>
+      <button class="choice" data-answer="横">横</button>
+    </div>
+    <div id="feedback"></div>
+    <button class="back-btn">◀ 戻る</button>
+  </section>
+
+  <!-- Scene 7 -->
+  <section class="scene" id="scene7">
+    <h2>まとめ</h2>
+    <p>力を“出す”のではなく、“方向へ流す”。<br>
+    方向は意識ではなく、構造で決まる。</p>
+    <p>次回は「構造を保ちながら力を繰り返す」。<br>
+    テーマは<strong>再現性と安定出力</strong>。</p>
+    <p class="end">── 第14回「安定と再現性」へ続く ──</p>
+    <div class="nav-buttons">
+      <button class="back-btn">◀ 戻る</button>
+      <a href="../lesson14/index.html" class="next-lesson-btn">▶ 第14回へ</a>
+    </div>
+  </section>
+
+</div>
+
+<script src="../lesson08/main.js"></script>
+</body>
+</html>
