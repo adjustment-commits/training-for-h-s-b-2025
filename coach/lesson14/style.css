@@ -1,0 +1,131 @@
+/* ===============================
+   ADJUSTMENT LAB Coach Style – Lesson14
+   安定と再現性（Stability & Precision）
+   =============================== */
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  background: linear-gradient(180deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+  color: #f1f5f9;
+  margin: 0;
+  padding: 0 20px 60px;
+  line-height: 1.8;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  animation: frostShift 25s ease-in-out infinite alternate;
+}
+
+/* --- Header --- */
+header {
+  text-align: center;
+  padding: 40px 0 20px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+h1 {
+  color: #a5f3fc;
+  font-size: 1.8rem;
+  line-height: 1.3;
+  margin-bottom: 6px;
+  text-shadow: 0 0 20px rgba(165,243,252,0.35);
+}
+
+.sub {
+  color: #bae6fd;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  text-shadow: 0 0 8px rgba(191,219,254,0.3);
+}
+
+/* --- Section Titles --- */
+h2 {
+  color: #7dd3fc;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  border-left: 4px solid #38bdf8;
+  padding-left: 8px;
+  font-size: 1.2rem;
+}
+
+/* --- Paragraphs & Lists --- */
+p, li, blockquote {
+  font-size: 1rem;
+  color: #e2e8f0;
+}
+
+ul, ol {
+  margin: 10px 0 20px 20px;
+}
+
+li {
+  margin-bottom: 6px;
+}
+
+/* --- Table --- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  background: rgba(255, 255, 255, 0.02);
+  box-shadow: 0 0 16px rgba(96,165,250,0.05);
+}
+
+th, td {
+  border: 1px solid #334155;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background: rgba(51,65,85,0.8);
+  color: #93c5fd;
+  font-weight: bold;
+}
+
+td {
+  color: #f8fafc;
+}
+
+/* --- Blockquote --- */
+blockquote {
+  background: rgba(255, 255, 255, 0.03);
+  border-left: 4px solid #38bdf8;
+  padding: 14px 16px;
+  margin: 24px 0;
+  font-style: italic;
+  color: #a5f3fc;
+  box-shadow: 0 0 10px rgba(56,189,248,0.15);
+}
+
+/* --- Footer --- */
+footer {
+  margin-top: 60px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #94a3b8;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding-top: 20px;
+}
+
+/* --- 背景アニメーション：冬の呼吸 --- */
+@keyframes frostShift {
+  0% {
+    background: linear-gradient(180deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+  }
+  50% {
+    background: linear-gradient(180deg, #1e293b 0%, #334155 50%, #475569 100%);
+  }
+  100% {
+    background: linear-gradient(180deg, #0f172a 0%, #334155 50%, #64748b 100%);
+  }
+}
+
+/* --- Responsive --- */
+@media (max-width: 600px) {
+  body { padding: 10px 12px 40px; }
+  h1 { font-size: 1.45rem; }
+  h2 { font-size: 1.1rem; }
+  p, li, blockquote { font-size: 0.95rem; }
+  table, th, td { font-size: 0.9rem; }
+}
