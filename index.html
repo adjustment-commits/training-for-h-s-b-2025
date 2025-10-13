@@ -5,6 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>高校野球トレーニング2025｜ADJUSTMENT LAB</title>
 
+<!-- ✅ PWA設定 -->
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0d1117">
+<link rel="apple-touch-icon" sizes="192x192" href="icons/icon-192.png">
+<link rel="apple-touch-icon" sizes="512x512" href="icons/icon-512.png">
+
+<style>
 /* --- 共通Lessonボタン --- */
 a.lesson {
   color: #fff;
@@ -27,23 +34,16 @@ a.lesson:hover {
 /* --- スマホ調整 --- */
 @media (max-width: 480px) {
   a.lesson {
-    font-size: 0.93rem;      /* ← 文字をやや小さく */
-    padding: 12px 14px;      /* ← ボタンの横幅を縮小 */
-    max-width: 90vw;         /* ← 画面幅の90%でフィット */
-    line-height: 1.4;        /* ← 行間を詰めて折り返し防止 */
-    white-space: nowrap;     /* ← 強制的に1行で表示 */
-    overflow: hidden;        /* ← 万一あふれたら隠す */
-    text-overflow: ellipsis; /* ← …で省略 */
+    font-size: 0.93rem;
+    padding: 12px 14px;
+    max-width: 90vw;
+    line-height: 1.4;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
 
-<!-- ✅ PWA設定 -->
-<link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#0d1117">
-<link rel="apple-touch-icon" sizes="192x192" href="icons/icon-192.png">
-<link rel="apple-touch-icon" sizes="512x512" href="icons/icon-512.png">
-
-<style>
 body {
   background: linear-gradient(#0d1117, #1a1a1a);
   color: #fff;
@@ -51,7 +51,6 @@ body {
   text-align: center;
   padding: 60px 20px;
   line-height: 1.8;
-  position: relative;
 }
 h1 {
   color: #d84a4a;
@@ -71,21 +70,6 @@ ul {
 }
 li {
   margin: 15px 0;
-}
-a.lesson {
-  color: #fff;
-  text-decoration: none;
-  display: block;
-  background: #1c2433;
-  padding: 16px 20px;
-  border-radius: 10px;
-  border: 2px solid #d84a4a;
-  transition: 0.3s;
-  font-size: 1.05rem;
-}
-a.lesson:hover {
-  background: #d84a4a;
-  border-color: #f47b7b;
 }
 
 /* --- 指導者マニュアルボタン --- */
@@ -111,7 +95,6 @@ a.coach-link:hover {
   background: #444;
 }
 
-/* --- Footer --- */
 footer {
   margin-top: 60px;
   font-size: 0.8rem;
@@ -124,8 +107,8 @@ footer {
 }
 </style>
 </head>
-<body>
 
+<body>
 <h1>ADJUSTMENT LAB</h1>
 <p class="subtitle">高校野球トレーニング2025<br>── 同じ練習の中でも抜け出す ──</p>
 
@@ -134,7 +117,6 @@ footer {
   <li><a href="players/lesson02/index.html" class="lesson">▶ 第2回：力を伝えるとは？</a></li>
 </ul>
 
-<!-- 指導者マニュアルボタン（小さく右下配置） -->
 <a href="coach/lesson01/index.html" class="coach-link">指導者マニュアル</a>
 
 <footer>
