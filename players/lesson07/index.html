@@ -1,1 +1,132 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第7回｜タイミングとリズム</title>
 
+<!-- ✅ PWA共通 -->
+<link rel="manifest" href="../../manifest.json">
+<meta name="theme-color" content="#0d1117">
+<link rel="apple-touch-icon" sizes="192x192" href="../../icons/icon-192.png">
+<link rel="apple-touch-icon" sizes="512x512" href="../../icons/icon-512.png">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="container">
+
+  <!-- Scene 1 -->
+  <section class="scene active" id="scene1">
+    <h1>第7回｜タイミングとリズム</h1>
+    <p>力を返せるようになったら、次は<strong>“リズム”</strong>。</p>
+    <p>動きの速さではなく、<strong>間（ま）と拍（はく）</strong>で体を操る。</p>
+    <button class="next-btn">▶ スタート</button>
+  </section>
+
+  <!-- Scene 2 -->
+  <section class="scene" id="scene2">
+    <h2>リズム＝動きの呼吸</h2>
+    <p>野球の動作は、呼吸のようなリズムをもっている。</p>
+    <p>ピッチングもバッティングも、<br>
+    「ため」→「解放」→「再びため」<br>
+    このサイクルが繰り返される。</p>
+    <button class="back-btn">◀ 戻る</button>
+    <button class="next-btn">▶ 次へ</button>
+  </section>
+
+  <!-- Scene 3 -->
+  <section class="scene" id="scene3">
+    <h2>体験① 拍を刻む</h2>
+    <p>メトロノームや音楽アプリを使って、<br>
+    足踏みで拍を合わせてみよう。</p>
+    <p><strong>1・2・3・4</strong> のテンポで、骨盤を前後にスイング。</p>
+    <p>感じるべきは「速さ」ではなく「間」。</p>
+    <button class="back-btn">◀ 戻る</button>
+    <button class="next-btn">▶ 次へ</button>
+  </section>
+
+  <!-- Scene 4 -->
+  <section class="scene" id="scene4">
+    <h2>体験② 骨盤ビート</h2>
+    <p>骨盤を「ため（1）→返す（2）」のリズムで動かす。</p>
+    <p>反発のリズムを一定に保ちながら、<br>
+    胸はそれに遅れて動く。</p>
+    <p>音のないリズムを体の中に作る。</p>
+    <button class="back-btn">◀ 戻る</button>
+    <button class="next-btn">▶ 次へ</button>
+  </section>
+
+  <!-- Scene 5 -->
+  <section class="scene" id="scene5">
+    <h2>実践① バトルロープ・リズム波</h2>
+    <p>ロープの波を左右交互に出す。</p>
+    <p><strong>速さよりも、リズムの一定さ</strong>。</p>
+    <p>骨盤と胸がズレずに“波を送る”こと。</p>
+    <p>20秒×3セット。</p>
+    <button class="back-btn">◀ 戻る</button>
+    <button class="next-btn">▶ 次へ</button>
+  </section>
+
+  <!-- Scene 6 -->
+  <section class="scene" id="scene6">
+    <h2>実践② ミニハードル・リズムステップ</h2>
+    <p>4台を設置して、テンポよく連続ジャンプ。</p>
+    <p>「1・2・3・4」のリズムを声に出して行う。</p>
+    <p>反発を待ち、次のリズムへ繋ぐ。</p>
+    <p>3往復。</p>
+    <button class="back-btn">◀ 戻る</button>
+    <button class="next-btn">▶ 次へ</button>
+  </section>
+
+  <!-- Scene 7 -->
+  <section class="scene" id="scene7">
+    <h2>実践③ メディシンボール・リズムスロー</h2>
+    <p>壁に向かって一定リズムでスロー。</p>
+    <p><strong>ため・返す・受ける</strong>を同じテンポで。</p>
+    <p>5往復×2セット。</p>
+    <button class="back-btn">◀ 戻る</button>
+    <button class="next-btn">▶ 次へ</button>
+  </section>
+
+  <!-- Scene 8 -->
+  <section class="scene" id="scene8">
+    <h2>問い</h2>
+    <p>リズムを作るうえで、最も大切なのは？</p>
+    <div class="choices">
+      <button class="choice" data-answer="速さを合わせる">速さを合わせる</button>
+      <button class="choice" data-answer="間を感じる">間を感じる</button>
+      <button class="choice" data-answer="強く動く">強く動く</button>
+    </div>
+    <div id="feedback"></div>
+    <button class="back-btn">◀ 戻る</button>
+  </section>
+
+  <!-- Scene 9 -->
+  <section class="scene" id="scene9">
+    <h2>整理と確認</h2>
+    <p>リズムとは<strong>力を出す順番</strong>の中にある“間”。</p>
+    <p>その間があるから、動きはスムーズに繋がる。</p>
+    <p>骨盤がリズムの指揮者。胸は旋律を奏でる。</p>
+    <button class="back-btn">◀ 戻る</button>
+    <button class="next-btn">▶ 次へ</button>
+  </section>
+
+  <!-- Scene 10 -->
+  <section class="scene" id="scene10">
+    <h2>まとめ</h2>
+    <p>リズムを感じる体は、崩れても戻れる体。<br>
+    タイミングは「作る」ものではなく「感じる」もの。</p>
+    <p class="end">── 第8回「安定と流動」へ続く ──</p>
+    <div class="nav-buttons">
+      <button class="back-btn">◀ 戻る</button>
+      <a href="../lesson08/index.html" class="next-lesson-btn">▶ 第8回へ</a>
+    </div>
+  </section>
+
+</div>
+
+<script src="./main.js"></script>
+</body>
+</html>
