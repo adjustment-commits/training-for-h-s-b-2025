@@ -3,10 +3,17 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>adjustment-lab｜高校野球対策トレーニング2025</title>
+<title>高校野球トレーニング2025｜ADJUSTMENT LAB</title>
+
+<!-- ✅ PWA設定 -->
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0d1117">
+<link rel="apple-touch-icon" sizes="192x192" href="icons/icon-192.png">
+<link rel="apple-touch-icon" sizes="512x512" href="icons/icon-512.png">
+
 <style>
 body {
-  background: #0d1117;
+  background: linear-gradient(#0d1117, #1a1a1a);
   color: #fff;
   font-family: 'Noto Sans JP', sans-serif;
   text-align: center;
@@ -15,16 +22,18 @@ body {
 }
 h1 {
   color: #d84a4a;
+  font-size: 1.8rem;
   margin-bottom: 8px;
 }
 p.subtitle {
   color: #ccc;
   margin-bottom: 40px;
+  font-size: 1rem;
 }
 ul {
   list-style: none;
   padding: 0;
-  max-width: 400px;
+  max-width: 420px;
   margin: 0 auto;
 }
 li {
@@ -39,6 +48,7 @@ a {
   border-radius: 10px;
   border: 2px solid #d84a4a;
   transition: 0.3s;
+  font-size: 1.05rem;
 }
 a:hover {
   background: #d84a4a;
@@ -49,21 +59,37 @@ footer {
   font-size: 0.8rem;
   color: #777;
 }
+.version {
+  color: #555;
+  font-size: 0.8rem;
+  margin-top: 10px;
+}
 </style>
 </head>
 <body>
 
-<h1>adjustment-lab</h1>
-<p class="subtitle">高校野球対策トレーニング2025<br>── 第1回：野球動作の再学習 ──</p>
+<h1>ADJUSTMENT LAB</h1>
+<p class="subtitle">高校野球トレーニング2025<br>── すべては順番と伝達から ──</p>
 
 <ul>
-  <li><a href="players/lesson01/index.html">▶ 選手用教材：野球動作の再学習</a></li>
-  <li><a href="coach/lesson01/index.html">▶ 講師用（指導進行表）</a></li>
+  <li><a href="players/lesson01/index.html">▶ 選手用｜第1回：野球動作の再学習</a></li>
+  <li><a href="players/lesson02/index.html">▶ 選手用｜第2回：力を伝えるとは？</a></li>
+  <li><a href="coach/lesson01/index.html">▶ 講師用｜第1回 指導マニュアル</a></li>
+  <li><a href="coach/lesson02/index.html">▶ 講師用｜第2回 指導マニュアル</a></li>
 </ul>
 
 <footer>
   <p>© 2025 adjustment-lab / Design by H. Nishimoto</p>
+  <p class="version">ver.1.0.0</p>
 </footer>
+
+<script>
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("service-worker.js");
+  });
+}
+</script>
 
 </body>
 </html>
