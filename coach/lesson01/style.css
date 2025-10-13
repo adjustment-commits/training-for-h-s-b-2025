@@ -1,69 +1,134 @@
+/* ===============================
+   COACH MANUAL BASE STYLE
+   ADJUSTMENT LAB
+   =============================== */
+
 body {
   font-family: 'Noto Sans JP', sans-serif;
-  background: #0e1117;
-  color: #fff;
+  background: #0d1117;
+  color: #f5f5f5;
   margin: 0;
-  line-height: 1.7;
-  padding-bottom: 60px;
+  padding: 20px;
+  line-height: 1.8;
 }
 
 header {
-  background: #18202c;
-  border-bottom: 2px solid #d84a4a;
-  padding: 20px;
   text-align: center;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #333;
 }
 
 h1 {
   color: #d84a4a;
-  margin-bottom: 10px;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
+  margin-bottom: 6px;
+}
+
+.sub {
+  color: #999;
+  font-size: 0.9rem;
 }
 
 h2 {
+  color: #f28f1b;
+  margin-top: 28px;
+  border-left: 4px solid #f28f1b;
+  padding-left: 10px;
+  font-size: 1.2rem;
+}
+
+h3 {
   color: #d84a4a;
-  border-left: 4px solid #d84a4a;
-  padding-left: 8px;
-  margin-top: 40px;
+  margin-top: 18px;
+  font-size: 1.05rem;
 }
 
 p, li {
   font-size: 1rem;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 10px;
-  margin-bottom: 20px;
-}
-
-th, td {
-  border: 1px solid #555;
-  padding: 8px;
-  text-align: left;
-  font-size: 0.9rem;
-}
-
-th {
-  background: #1a202d;
-  color: #fff;
+  color: #e5e5e5;
 }
 
 ul {
-  margin-left: 20px;
+  margin: 10px 0 20px 18px;
 }
 
-.note {
-  color: #ffd166;
-  font-size: 0.9rem;
+section {
+  margin-bottom: 30px;
 }
 
+/* --- ドリル記事 --- */
+.drill {
+  background: #1a1f29;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 14px 16px;
+  margin-top: 14px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+.drill h3 {
+  color: #f28f1b;
+}
+
+.drill-img {
+  width: 100%;
+  max-width: 520px;
+  margin: 10px auto;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(255,255,255,0.08);
+}
+
+/* --- ボタン --- */
 footer {
-  border-top: 1px solid #333;
   text-align: center;
-  padding: 20px;
-  font-size: 0.8rem;
-  color: #777;
+  margin-top: 50px;
 }
 
+a.back, a.next {
+  display: inline-block;
+  margin: 6px 10px;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: 0.3s;
+}
+
+a.back {
+  background: #333;
+  color: #ccc;
+  border: 1px solid #555;
+}
+a.back:hover {
+  background: #444;
+}
+
+a.next {
+  background: #d84a4a;
+  color: #fff;
+  border: 1px solid #d84a4a;
+}
+a.next:hover {
+  background: #f06161;
+}
+
+/* --- スマホ調整 --- */
+@media (max-width: 600px) {
+  body {
+    padding: 12px;
+    font-size: 0.95rem;
+  }
+  h1 {
+    font-size: 1.2rem;
+  }
+  h2 {
+    font-size: 1.05rem;
+  }
+  .drill-img {
+    max-width: 100%;
+  }
+  footer {
+    margin-top: 30px;
+  }
+}
