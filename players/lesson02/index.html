@@ -3,145 +3,135 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>第2回｜力を伝えるとは？</title>
+<title>高校野球トレーニング2025｜ADJUSTMENT LAB</title>
 
-<!-- ✅ PWA継承 -->
-<link rel="manifest" href="../lesson01/manifest.json">
+<!-- ✅ PWA設定 -->
+<link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#0d1117">
-<link rel="apple-touch-icon" sizes="192x192" href="../lesson01/icons/icon-192.png">
-<link rel="apple-touch-icon" sizes="512x512" href="../lesson01/icons/icon-512.png">
+<link rel="apple-touch-icon" sizes="192x192" href="icons/icon-192.png">
+<link rel="apple-touch-icon" sizes="512x512" href="icons/icon-512.png">
 
-<link rel="stylesheet" href="style.css">
+<style>
+body {
+  background: linear-gradient(#0d1117, #1a1a1a);
+  color: #fff;
+  font-family: 'Noto Sans JP', sans-serif;
+  text-align: center;
+  padding: 60px 20px;
+  line-height: 1.8;
+  position: relative;
+}
+h1 {
+  color: #d84a4a;
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+}
+p.subtitle {
+  color: #ccc;
+  margin-bottom: 40px;
+  font-size: 1rem;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  max-width: 420px;
+  margin: 0 auto;
+}
+li {
+  margin: 15px 0;
+}
+a.lesson {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  background: #1c2433;
+  padding: 16px 20px;
+  border-radius: 10px;
+  border: 2px solid #d84a4a;
+  transition: 0.3s;
+  font-size: 1.05rem;
+  max-width: 420px;
+  margin: 0 auto;
+}
+a.lesson:hover {
+  background: #d84a4a;
+  border-color: #f47b7b;
+}
+
+/* --- スマホ調整 --- */
+@media (max-width: 480px) {
+  a.lesson {
+    font-size: 0.93rem;
+    padding: 12px 14px;
+    max-width: 90vw;
+    line-height: 1.4;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+/* --- 指導者マニュアルボタン --- */
+a.coach-link {
+  position: fixed;
+  right: 14px;
+  bottom: 14px;
+  background: #333;
+  color: #bbb;
+  font-size: 0.8rem;
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: 1px solid #555;
+  text-decoration: none;
+  opacity: 0.6;
+  transition: 0.3s;
+  z-index: 10;
+}
+a.coach-link:hover {
+  opacity: 1;
+  color: #fff;
+  border-color: #888;
+  background: #444;
+}
+
+/* --- Footer --- */
+footer {
+  margin-top: 60px;
+  font-size: 0.8rem;
+  color: #777;
+}
+.version {
+  color: #555;
+  font-size: 0.8rem;
+  margin-top: 10px;
+}
+</style>
 </head>
 <body>
 
-<div id="container">
+<h1>ADJUSTMENT LAB</h1>
+<p class="subtitle">高校野球トレーニング2025<br>── すべては順番と伝達から ──</p>
 
-  <!-- Scene 1 -->
-  <section class="scene active" id="scene1">
-    <h1>第2回｜力を伝えるとは？</h1>
-    <p>前回は「順番」を学んだ。今回はその順番を“つなぐ”回。</p>
-    <p>力はどこから来て、どこへ行くのか——そこを体で理解する。</p>
-    <button class="next-btn">▶ スタート</button>
-  </section>
+<ul>
+  <li><a href="players/lesson01/index.html" class="lesson">▶ 第1回：野球動作の再学習</a></li>
+  <li><a href="players/lesson02/index.html" class="lesson">▶ 第2回：力を伝えるとは？</a></li>
+</ul>
 
-  <!-- Scene 2 -->
-  <section class="scene" id="scene2">
-    <h2>力は地面から始まる</h2>
-    <p>ピッチングもバッティングも、最初のエネルギーは<br><strong>「地面反力」</strong>から生まれる。</p>
-    <div class="diagram motion">
-      <h3>力の流れ</h3>
-      <svg viewBox="0 0 600 180" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="80" cy="90" r="35" fill="#2a313f" stroke="#d84a4a" stroke-width="3" class="pulse"></circle>
-        <text x="80" y="95" text-anchor="middle" fill="#fff" font-size="16">地面</text>
+<!-- 指導者マニュアルボタン（右下控えめ） -->
+<a href="coach/lesson01/index.html" class="coach-link">指導者マニュアル</a>
 
-        <circle cx="220" cy="90" r="35" fill="#1c2433" stroke="#ccc" stroke-width="3"></circle>
-        <text x="220" y="95" text-anchor="middle" fill="#fff" font-size="16">足</text>
+<footer>
+  <p>© 2025 adjustment-lab / Design by H. Nishimoto</p>
+  <p class="version">ver.1.0.1</p>
+</footer>
 
-        <circle cx="360" cy="90" r="35" fill="#1c2433" stroke="#ccc" stroke-width="3"></circle>
-        <text x="360" y="95" text-anchor="middle" fill="#fff" font-size="16">骨盤</text>
+<script>
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("service-worker.js");
+  });
+}
+</script>
 
-        <circle cx="500" cy="90" r="35" fill="#1c2433" stroke="#ccc" stroke-width="3"></circle>
-        <text x="500" y="95" text-anchor="middle" fill="#fff" font-size="16">胸郭</text>
-
-        <line x1="115" y1="90" x2="185" y2="90" stroke="#d84a4a" stroke-width="3" class="flowline"/>
-        <line x1="255" y1="90" x2="325" y2="90" stroke="#d84a4a" stroke-width="3" class="flowline"/>
-        <line x1="395" y1="90" x2="465" y2="90" stroke="#d84a4a" stroke-width="3" class="flowline"/>
-      </svg>
-    </div>
-
-    <p>この流れが切れた瞬間、力は伝わらない。<br>すべては「地面から」だ。</p>
-    <button class="back-btn">◀ 戻る</button>
-    <button class="next-btn">▶ 次へ</button>
-  </section>
-
-  <!-- Scene 3 -->
-  <section class="scene" id="scene3">
-    <h2>体験① 足裏の通り道</h2>
-    <p>両足を肩幅に開き、ゆっくり重心を移動してみよう。</p>
-    <p><strong>かかと → 母指球 → 指先</strong><br>この順番で地面を押す。</p>
-    <p>感じた？それが「力の入口」だ。</p>
-    <button class="back-btn">◀ 戻る</button>
-    <button class="next-btn">▶ 次へ</button>
-  </section>
-
-  <!-- Scene 4 -->
-  <section class="scene" id="scene4">
-    <h2>体験② 骨盤への伝達</h2>
-    <p>片足立ちになり、反対の足で軽く地面を押してみる。</p>
-    <p>その力が「骨盤」に届く感覚を探そう。</p>
-    <p>押すのは足。動かすのは骨盤。<br>ここで“つなぐ”感覚が育つ。</p>
-    <button class="back-btn">◀ 戻る</button>
-    <button class="next-btn">▶ 次へ</button>
-  </section>
-
-  <!-- Scene 5 -->
-  <section class="scene" id="scene5">
-    <h2>実践① ステップ台ドリル</h2>
-    <p>20cm程度のステップ台を使う。<br>軽く踏み出し、押し返す。</p>
-    <p><strong>「跳ぶ」ではなく「押す」。</strong><br>骨盤を前に押し出すように。</p>
-    <p>片脚×10回×2セット。</p>
-    <button class="back-btn">◀ 戻る</button>
-    <button class="next-btn">▶ 次へ</button>
-  </section>
-
-  <!-- Scene 6 -->
-  <section class="scene" id="scene6">
-    <h2>実践② スライドボード</h2>
-    <p>骨盤→胸郭→腕の順で滑らかに動かす。</p>
-    <p><strong>「押して滑る」「胸は遅れてくる」。</strong><br>骨盤リーダーを忘れずに。</p>
-    <p>左右10往復。</p>
-    <button class="back-btn">◀ 戻る</button>
-    <button class="next-btn">▶ 次へ</button>
-  </section>
-
-  <!-- Scene 7 -->
-  <section class="scene" id="scene7">
-    <h2>実践③ ミニハードル連動</h2>
-    <p>3台設置し、前方へテンポよくジャンプ。</p>
-    <p><strong>足で押す → 骨盤で運ぶ → 胸で受ける。</strong></p>
-    <p>力を“出す”ではなく、“伝える”を意識。</p>
-    <button class="back-btn">◀ 戻る</button>
-    <button class="next-btn">▶ 次へ</button>
-  </section>
-
-  <!-- Scene 8 -->
-  <section class="scene" id="scene8">
-    <h2>問い</h2>
-    <p>力を伝えるって、どういうことだと思う？</p>
-    <div class="choices">
-      <button class="choice" data-answer="強く踏む">強く踏むこと</button>
-      <button class="choice" data-answer="滑らかに動く">滑らかに動くこと</button>
-      <button class="choice" data-answer="体全体でつなぐ">体全体でつなぐこと</button>
-    </div>
-    <div id="feedback"></div>
-    <button class="back-btn">◀ 戻る</button>
-  </section>
-
-  <!-- Scene 9 -->
-  <section class="scene" id="scene9">
-    <h2>整理と確認</h2>
-    <p>力の流れを再確認。</p>
-    <p>① 地面 → ② 足 → ③ 骨盤 → ④ 胸郭 → ⑤ 腕</p>
-    <p>「力を出す」ではなく「力をつなぐ」。</p>
-    <button class="back-btn">◀ 戻る</button>
-    <button class="next-btn">▶ 次へ</button>
-  </section>
-
-  <!-- Scene 10 -->
-  <section class="scene" id="scene10">
-    <h2>まとめ</h2>
-    <p>地面を押す感覚、骨盤でつなぐ感覚をつかんだか？</p>
-    <p>力は流れるもの。止めず、つなげる。</p>
-    <p class="end">── 第3回「安定と軸」へ続く ──</p>
-    <div class="nav-buttons">
-      <button class="back-btn">◀ 戻る</button>
-      <a href="../lesson03/index.html" class="next-lesson-btn">▶ 第3回へ</a>
-    </div>
-  </section>
-
-</div>
-
-<script src="../lesson01/main.js"></script>
 </body>
 </html>
