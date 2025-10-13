@@ -1,1 +1,128 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第3回｜安定と軸</title>
 
+<!-- ✅ PWA設定 -->
+<link rel="manifest" href="../../manifest.json">
+<meta name="theme-color" content="#0d1117">
+<link rel="apple-touch-icon" sizes="192x192" href="../../icons/icon-192.png">
+<link rel="apple-touch-icon" sizes="512x512" href="../../icons/icon-512.png">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="container">
+
+  <!-- Scene 1 -->
+  <section class="scene active" id="scene1">
+    <h1>第3回｜安定と軸</h1>
+    <p>力をつなげるには、<strong>止める力</strong>が必要だ。</p>
+    <p>「安定」とは動かないことじゃない。<br>
+    「動く中で、必要な場所を支えられること」。</p>
+    <button class="next-btn">▶ スタート</button>
+  </section>
+
+  <!-- Scene 2 -->
+  <section class="scene" id="scene2">
+    <h2>安定とは何か</h2>
+    <p>軸とは“1本の棒”ではなく、<strong>力の通り道</strong>の中にある。</p>
+    <p>野球動作では、<strong>骨盤と胸郭の間</strong>が軸になる。</p>
+    <p>動きを止めるのではなく、<strong>流れを制御する</strong>ことが目的。</p>
+    <button class="back-btn">◀ 戻る</button>
+    <button class="next-btn">▶ 次へ</button>
+  </section>
+
+  <!-- Scene 3 -->
+  <section class="scene" id="scene3">
+    <h2>体験① 軸を感じる</h2>
+    <p>足を肩幅に開いて、骨盤を軽く左右に動かす。</p>
+    <p><strong>胸を動かさずに骨盤だけ動かす。</strong></p>
+    <p>その時、へその奥に“芯”のような感覚が出るはずだ。</p>
+    <button class="back-btn">◀ 戻る</button>
+    <button class="next-btn">▶ 次へ</button>
+  </section>
+
+  <!-- Scene 4 -->
+  <section class="scene" id="scene4">
+    <h2>体験② 骨盤を支える</h2>
+    <p>片脚立ちで骨盤を少しだけ前後に動かす。</p>
+    <p><strong>支えている脚の内側（内転筋）とお尻の外側（中臀筋）</strong>でバランスをとる。</p>
+    <p>グラグラしてもいい。<br>それを“安定させる”感覚が育つ。</p>
+    <button class="back-btn">◀ 戻る</button>
+    <button class="next-btn">▶ 次へ</button>
+  </section>
+
+  <!-- Scene 5 -->
+  <section class="scene" id="scene5">
+    <h2>実践① 片脚軸スプリット</h2>
+    <p>両手を胸の前で組み、片脚を一歩後ろに引く。</p>
+    <p><strong>前脚の内ももとお尻で支え、骨盤を前に滑らせる。</strong></p>
+    <p>姿勢を崩さずに10秒キープ × 2セット。</p>
+    <button class="back-btn">◀ 戻る</button>
+    <button class="next-btn">▶ 次へ</button>
+  </section>
+
+  <!-- Scene 6 -->
+  <section class="scene" id="scene6">
+    <h2>実践② バランスボード軸コントロール</h2>
+    <p>ボードやバランスパッドの上で立ち、<br>骨盤を前後にゆっくり動かす。</p>
+    <p><strong>胸を動かさず、骨盤だけを制御。</strong></p>
+    <p>安定＝止まることではなく、<br>動きの中心を感じること。</p>
+    <button class="back-btn">◀ 戻る</button>
+    <button class="next-btn">▶ 次へ</button>
+  </section>
+
+  <!-- Scene 7 -->
+  <section class="scene" id="scene7">
+    <h2>実践③ メディシンボールスイング</h2>
+    <p>骨盤を先に動かし、胸が“後からついてくる”ようにスイング。</p>
+    <p><strong>支点は骨盤の中心。</strong><br>そこが軸となって全身が回る。</p>
+    <p>左右10回×2セット。</p>
+    <button class="back-btn">◀ 戻る</button>
+    <button class="next-btn">▶ 次へ</button>
+  </section>
+
+  <!-- Scene 8 -->
+  <section class="scene" id="scene8">
+    <h2>問い</h2>
+    <p>「安定」って、どういうことだと思う？</p>
+    <div class="choices">
+      <button class="choice" data-answer="動かないこと">動かないこと</button>
+      <button class="choice" data-answer="支えること">支えること</button>
+      <button class="choice" data-answer="動きながら支えること">動きながら支えること</button>
+    </div>
+    <div id="feedback"></div>
+    <button class="back-btn">◀ 戻る</button>
+    <button class="next-btn">▶ 次へ</button>
+  </section>
+
+  <!-- Scene 9 -->
+  <section class="scene" id="scene9">
+    <h2>整理と確認</h2>
+    <p>安定とは、力の流れを止めずに<br><strong>中心で支えること。</strong></p>
+    <p>軸を保つ＝動きの自由度を守る。</p>
+    <button class="back-btn">◀ 戻る</button>
+    <button class="next-btn">▶ 次へ</button>
+  </section>
+
+  <!-- Scene 10 -->
+  <section class="scene" id="scene10">
+    <h2>まとめ</h2>
+    <p>軸は作るものではなく、<br>動きの中で感じるもの。</p>
+    <p>安定があるからこそ、力は流れる。</p>
+    <p class="end">── 第4回「回旋と反応」へ続く ──</p>
+    <div class="nav-buttons">
+      <button class="back-btn">◀ 戻る</button>
+      <a href="../lesson04/index.html" class="next-lesson-btn">▶ 第4回へ</a>
+    </div>
+  </section>
+
+</div>
+
+<script src="./main.js"></script>
+</body>
+</html>
