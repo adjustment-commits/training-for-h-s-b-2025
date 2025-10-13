@@ -1,0 +1,162 @@
+/* ===============================
+   ADJUSTMENT LAB Lesson14
+   安定と再現性（Consistency & Core）
+   =============================== */
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  background: linear-gradient(180deg, #0f172a 0%, #1e293b 40%, #334155 100%);
+  color: #f1f5f9;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  animation: calmShift 20s ease-in-out infinite alternate;
+}
+
+#container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* ===============================
+   Scene Layout
+   =============================== */
+.scene {
+  display: none;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+  max-width: 720px;
+  padding: 20px;
+  position: relative;
+}
+
+.scene.active {
+  display: block;
+  opacity: 1;
+}
+
+/* ===============================
+   Typography
+   =============================== */
+h1, h2 {
+  color: #93c5fd;
+  text-shadow: 0 0 12px rgba(147,197,253,0.4);
+}
+
+h1 {
+  font-size: 1.7rem;
+  line-height: 1.4;
+}
+
+h2 {
+  font-size: 1.4rem;
+  line-height: 1.4;
+  margin-top: 1.4em;
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1em;
+  color: #e2e8f0;
+}
+
+/* ===============================
+   Buttons
+   =============================== */
+button {
+  background: #64748b;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 18px;
+  font-size: 1rem;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #94a3b8;
+}
+
+.next-lesson-btn {
+  display: inline-block;
+  background: #38bdf8;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  padding: 10px 18px;
+  margin-top: 20px;
+  transition: 0.3s;
+}
+
+.next-lesson-btn:hover {
+  background: #0ea5e9;
+}
+
+/* ===============================
+   Choices (クイズ)
+   =============================== */
+.choices {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.choice {
+  background: #1e293b;
+  border: 1px solid #64748b;
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 6px;
+}
+
+.choice:hover {
+  background: #64748b;
+}
+
+#feedback {
+  margin-top: 20px;
+  font-size: 1.1rem;
+  color: #facc15;
+}
+
+.end {
+  margin-top: 40px;
+  font-style: italic;
+  color: #cbd5e1;
+}
+
+/* ===============================
+   背景アニメーション（静かな動き）
+   =============================== */
+@keyframes calmShift {
+  0% {
+    background: linear-gradient(180deg, #0f172a 0%, #1e293b 40%, #334155 100%);
+  }
+  50% {
+    background: linear-gradient(180deg, #1e293b 0%, #334155 40%, #475569 100%);
+  }
+  100% {
+    background: linear-gradient(180deg, #0f172a 0%, #334155 40%, #64748b 100%);
+  }
+}
+
+/* ===============================
+   Responsive
+   =============================== */
+@media (max-width: 600px) {
+  h1 { font-size: 1.35rem; }
+  h2 { font-size: 1.2rem; }
+  p { font-size: 1rem; line-height: 1.7; }
+  button, .next-lesson-btn { font-size: 0.95rem; padding: 8px 14px; }
+}
