@@ -1,1 +1,122 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第11回｜重心と反応</title>
 
+<!-- ✅ PWA継承 -->
+<link rel="manifest" href="../lesson01/manifest.json">
+<meta name="theme-color" content="#0d1117">
+<link rel="apple-touch-icon" sizes="192x192" href="../lesson01/icons/icon-192.png">
+<link rel="apple-touch-icon" sizes="512x512" href="../lesson01/icons/icon-512.png">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="container">
+
+  <!-- Scene 1 -->
+  <section class="scene active" id="scene1">
+    <h1>第11回｜重心と反応</h1>
+    <p>止まっていても、準備は始まっている。<br>
+    今回は「動かずに動く」ための感覚を掴もう。</p>
+    <button class="next-btn">▶ スタート</button>
+  </section>
+
+  <!-- Scene 2 -->
+  <section class="scene" id="scene2">
+    <h2>静止は“準備”ではなく“予備動作”</h2>
+    <p>止まっているように見えて、実は揺れている。<br>
+    重心の微細な揺れが、次の一歩を作る。</p>
+    <p><strong>「止まる」ではなく「支えている」。</strong></p>
+    <button class="back-btn">◀ 戻る</button>
+    <button class="next-btn">▶ 次へ</button>
+  </section>
+
+  <!-- Scene 3 -->
+  <section class="scene" id="scene3">
+    <h2>体験① ストレッチポール重心チェック</h2>
+    <p>ポールの上で両足立ち。<br>
+    揺れながら、どこで体を止めているか感じよう。</p>
+    <p>“揺れを消す”ではなく、“揺れを整える”。</p>
+    <button class="back-btn">◀ 戻る</button>
+    <button class="next-btn">▶ 次へ</button>
+  </section>
+
+  <!-- Scene 4 -->
+  <section class="scene" id="scene4">
+    <h2>体験② 骨盤スイング反応</h2>
+    <p>骨盤を小さく前後にスイング。<br>
+    脚を動かさずに、全身を反応させる。</p>
+    <p><strong>「骨盤が動く → 地面が反応する」</strong><br>
+    これが重心の波。</p>
+    <button class="back-btn">◀ 戻る</button>
+    <button class="next-btn">▶ 次へ</button>
+  </section>
+
+  <!-- Scene 5 -->
+  <section class="scene" id="scene5">
+    <h2>実践① バトルロープ×テンポ反応</h2>
+    <p>強く振らず、テンポを維持。<br>
+    力ではなく“流れ”を感じる。</p>
+    <p>反応の速さは、力の大きさではなく<br>
+    <strong>「タイミングの正確さ」</strong>にある。</p>
+    <button class="back-btn">◀ 戻る</button>
+    <button class="next-btn">▶ 次へ</button>
+  </section>
+
+  <!-- Scene 6 -->
+  <section class="scene" id="scene6">
+    <h2>実践② 光反応ダッシュ</h2>
+    <p>光電管 or コーチの合図で反応ダッシュ。</p>
+    <p>大事なのは「見てから動く」ではなく、<br>
+    <strong>“感じた瞬間に動く”</strong>こと。</p>
+    <p>0.1秒の差が勝負を決める。</p>
+    <button class="back-btn">◀ 戻る</button>
+    <button class="next-btn">▶ 次へ</button>
+  </section>
+
+  <!-- Scene 7 -->
+  <section class="scene" id="scene7">
+    <h2>実践③ ミニハードル×スライドリズム</h2>
+    <p>3台設置して、連続で前後スライド。</p>
+    <p>骨盤→胸郭→腕の流れを崩さず、<br>
+    <strong>重心を“投げ出さずに運ぶ”</strong>感覚を。</p>
+    <p>前のめりではなく、流れの中に乗る。</p>
+    <button class="back-btn">◀ 戻る</button>
+    <button class="next-btn">▶ 次へ</button>
+  </section>
+
+  <!-- Scene 8 -->
+  <section class="scene" id="scene8">
+    <h2>問い</h2>
+    <p>反応の速い選手と遅い選手の違いは何だと思う？</p>
+    <div class="choices">
+      <button class="choice" data-answer="筋力">筋力</button>
+      <button class="choice" data-answer="集中力">集中力</button>
+      <button class="choice" data-answer="準備の質">準備の質</button>
+    </div>
+    <div id="feedback"></div>
+    <button class="back-btn">◀ 戻る</button>
+  </section>
+
+  <!-- Scene 9 -->
+  <section class="scene" id="scene9">
+    <h2>まとめ</h2>
+    <p>反応は「瞬発力」ではなく「準備の質」で決まる。<br>
+    止まっている時点で、すでに動いている。</p>
+    <p><strong>静止の中に“動きの芽”を持て。</strong></p>
+    <p class="end">── 第12回「連動の再統合」へ続く ──</p>
+    <div class="nav-buttons">
+      <button class="back-btn">◀ 戻る</button>
+      <a href="../lesson12/index.html" class="next-lesson-btn">▶ 第12回へ</a>
+    </div>
+  </section>
+
+</div>
+
+<script src="../lesson08/main.js"></script>
+</body>
+</html>
