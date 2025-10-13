@@ -1,0 +1,109 @@
+/* ===============================
+   修了証スタイル
+   =============================== */
+
+body {
+  font-family: 'Noto Serif JP', serif;
+  background: linear-gradient(180deg, #fefce8 0%, #fff 100%);
+  color: #222;
+  margin: 0;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.certificate-container {
+  background: #fff;
+  border: 3px solid #d4af37;
+  border-radius: 10px;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 40px 30px;
+  box-shadow: 0 0 25px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.certificate-container::before {
+  content: "";
+  position: absolute;
+  top: 10px; left: 10px; right: 10px; bottom: 10px;
+  border: 2px solid rgba(212,175,55,0.4);
+  border-radius: 8px;
+  pointer-events: none;
+}
+
+h1 {
+  color: #b8860b;
+  font-size: 2rem;
+  margin-bottom: 8px;
+  letter-spacing: 0.1em;
+}
+
+.sub {
+  color: #444;
+  margin-bottom: 40px;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.body p {
+  font-size: 1rem;
+  line-height: 2;
+  margin-bottom: 18px;
+}
+
+.quote {
+  font-style: italic;
+  color: #b8860b;
+  margin: 30px 0;
+  font-weight: bold;
+}
+
+.name-area, .date-area {
+  font-size: 1.1rem;
+  margin-top: 20px;
+}
+
+.line {
+  display: inline-block;
+  width: 220px;
+  border-bottom: 1px solid #333;
+  margin-left: 8px;
+}
+
+.footer {
+  margin-top: 50px;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.footer strong {
+  font-size: 1.1rem;
+  color: #111;
+}
+
+.return a {
+  display: inline-block;
+  margin-top: 40px;
+  background: linear-gradient(90deg, #facc15, #f87171);
+  color: #111;
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.return a:hover {
+  background: linear-gradient(90deg, #f87171, #facc15);
+  transform: scale(1.03);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .certificate-container {
+    padding: 30px 20px;
+  }
+  h1 { font-size: 1.7rem; }
+  .body p { font-size: 0.95rem; }
+  .name-area, .date-area { font-size: 1rem; }
+}
