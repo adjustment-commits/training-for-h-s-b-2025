@@ -146,3 +146,52 @@ footer a:hover {
   h2 { font-size: 1.1rem; }
   p, li, blockquote { font-size: 0.95rem; }
 }
+/* ============================
+   読みやすさ＆統一トーン修正
+   ============================ */
+
+/* 全体トーン調整 */
+body {
+  background: linear-gradient(180deg, #0d1117 0%, #1a2233 60%, #0b0f18 100%) !important;
+  color: #e2e8f0 !important;
+}
+
+/* Drillブロックを暗基調へ */
+.drill {
+  background: rgba(255,255,255,0.05) !important;
+  border-left: 4px solid #3b82f6 !important;
+  border-radius: 6px;
+  padding: 14px 18px;
+  color: #f1f5f9 !important;
+  box-shadow: 0 0 8px rgba(59,130,246,0.15);
+}
+.drill h3 {
+  color: #93c5fd !important;
+}
+
+/* コーチノートも暗めに統一 */
+.coach-note {
+  background: rgba(255,255,255,0.07) !important;
+  border-left: 6px solid #60a5fa !important;
+  color: #f1f5f9 !important;
+  box-shadow: 0 0 10px rgba(59,130,246,0.2);
+}
+.coach-note h2 {
+  color: #93c5fd !important;
+}
+.coach-note blockquote {
+  background: rgba(255,255,255,0.1) !important;
+  border-left: 4px solid #60a5fa !important;
+  color: #e0f2fe !important;
+}
+.coach-note li::marker {
+  color: #60a5fa !important;
+}
+
+/* summary部分も黒地に近づけ */
+.summary {
+  background: rgba(255,255,255,0.08) !important;
+  color: #f8fafc !important;
+  border-radius: 6px;
+  border-left: 3px solid #60a5fa;
+}
