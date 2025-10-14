@@ -124,3 +124,11 @@ a:hover {
   margin-top: 6px;
   text-shadow: 0 0 3px #000;
 }
+
+.evolution-img {
+  width: 100%;
+  max-width: 720px;
+  display: block;
+  margin: 12px auto 24px;
+  border-radius: 8px;
+}
