@@ -104,3 +104,22 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+/* セグメント進化画像 */
+.evolution-img {
+  width: 100%;
+  max-width: 640px;
+  border: 1px solid #ffd85c;
+  border-radius: 6px;
+  display: block;
+  margin: 12px auto 24px;
+  box-shadow: 0 0 8px rgba(255, 216, 92, 0.3);
+}
+
+.visual-caption {
+  color: #ffd85c;
+  text-align: center;
+  font-size: 0.95rem;
+  margin-top: 24px;
+  margin-bottom: 4px;
+}
