@@ -122,6 +122,15 @@ footer {
   margin: 4px 0;
   text-align: center;
 }
+
+/* スマホで第0回が消える問題の修正 */
+.lesson-grid a {
+  min-height: 80px;   /* ← これが最重要。高さを確保する */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
   
 </style>
 </head>
