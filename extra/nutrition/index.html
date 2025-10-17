@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>番外編｜食べても大きくならない理由？</title>
+<style>
+body {
+  background:#0d1117;
+  color:#fff;
+  font-family:'Noto Sans JP',sans-serif;
+  padding:40px 20px;
+  text-align:center;
+}
+h1 { color:#22c55e; margin-bottom:10px; }
+button {
+  display:block;
+  width:100%;
+  max-width:320px;
+  margin:20px auto;
+  padding:16px;
+  font-size:1rem;
+  border:none;
+  border-radius:10px;
+  color:#fff;
+  cursor:pointer;
+  transition:0.3s;
+}
+button:hover { transform:scale(1.03); }
+.protein { background:#3b82f6; }
+.bone { background:#facc15; color:#111; }
+.energy { background:#ef4444; }
+.detail {
+  display:none;
+  background:#1e293b;
+  margin:10px auto;
+  padding:12px;
+  border-radius:8px;
+  max-width:340px;
+  text-align:left;
+  font-size:0.9rem;
+  color:#ddd;
+  line-height:1.6;
+}
+</style>
+</head>
+<body>
+
+<h1>🍽️ 番外編｜食べても大きくならない理由？</h1>
+<p>＋1品で体が変わる。<br>食べ合わせが、成長のカギ。</p>
+
+<button class="protein" onclick="toggle('p1')">🍖 タンパク質を活かす</button>
+<div id="p1" class="detail">
+納豆や玄米などの「ビタミンB群」を足すと、<br>
+アミノ酸の利用効率が上がり、筋肉が作られやすくなる。
+</div>
+
+<button class="bone" onclick="toggle('p2')">🥛 骨を強くする</button>
+<div id="p2" class="detail">
+鮭・きのこ・牛乳の「ビタミンD＋カルシウム」は、<br>
+骨の成長を助け、吸収効率を高める。
+</div>
+
+<button class="energy" onclick="toggle('p3')">🍚 エネルギーを使える体に</button>
+<div id="p3" class="detail">
+ひじき・ナッツ・レバーなどの「マグネシウム・鉄」は、<br>
+糖や酸素をエネルギーに変える代謝の潤滑油。
+</div>
+
+<script>
+function toggle(id){
+  const el = document.getElementById(id);
+  el.style.display = (el.style.display === 'block') ? 'none' : 'block';
+}
+</script>
+
+<footer style="margin-top:40px; color:#666; font-size:0.8rem;">
+© 2025 adjustment-lab / Nutrition edition
+</footer>
+
+</body>
+</html>
