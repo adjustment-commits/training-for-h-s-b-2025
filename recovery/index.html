@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>番外編｜回復とは何か？</title>
+<style>
+body {
+  background:#0d1117;
+  color:#fff;
+  font-family:'Noto Sans JP',sans-serif;
+  text-align:center;
+  padding:40px 20px;
+}
+h1 { color:#22c55e; margin-bottom:10px; }
+.icon-wrapper { margin:0 auto 20px; width:180px; height:180px; }
+.icon-wrapper img { width:100%; border-radius:50%; box-shadow:0 0 20px rgba(34,197,94,0.4); }
+p.lead { color:#ccc; margin-bottom:30px; line-height:1.8; }
+
+button {
+  display:block;
+  width:100%;
+  max-width:320px;
+  margin:16px auto;
+  padding:14px;
+  font-size:1rem;
+  border:none;
+  border-radius:10px;
+  color:#fff;
+  cursor:pointer;
+  transition:0.3s;
+}
+button:hover { transform:scale(1.03); }
+.bath { background:#3b82f6; }
+.sleep { background:#9333ea; }
+.breath { background:#22c55e; color:#0d1117; }
+
+footer { margin-top:40px; color:#666; font-size:0.8rem; }
+
+/* モーダル */
+.modal {
+  display:none;
+  position:fixed;
+  z-index:100;
+  left:0; top:0;
+  width:100%; height:100%;
+  background:rgba(0,0,0,0.7);
+}
+.modal-content {
+  background:#1e293b;
+  color:#fff;
+  margin:8% auto;
+  padding:24px 26px;
+  border-radius:12px;
+  max-width:380px;
+  text-align:left;
+  position:relative;
+  animation:fadeIn 0.3s ease;
+}
+.modal-content h2 {
+  color:#22c55e;
+  font-size:1.1rem;
+  margin-bottom:10px;
+}
+.modal-content h3 {
+  color:#93c5fd;
+  font-size:0.95rem;
+  margin-top:14px;
+  margin-bottom:4px;
+}
+.modal-content p { line-height:1.7; font-size:0.9rem; margin-bottom:10px; color:#e5e7eb; }
+.modal-content img { width:100%; border-radius:10px; margin-top:10px; }
+
+.tag {
+  display:inline-block;
+  background:#22c55e;
+  color:#0d1117;
+  font-size:0.8rem;
+  font-weight:bold;
+  padding:4px 10px;
+  border-radius:12px;
+  margin:8px 0;
+}
+.close {
+  position:absolute;
+  top:10px; right:14px;
+  font-size:1.3rem;
+  color:#aaa;
+  cursor:pointer;
+}
+.close:hover { color:#fff; }
+
+@keyframes fadeIn {
+  from { opacity:0; transform:translateY(-10px); }
+  to { opacity:1; transform:translateY(0); }
+}
+</style>
+</head>
+<body>
+
+<div class="icon-wrapper">
+  <img src="../../images/icon_recovery_lab.png" alt="回復アイコン">
+</div>
+
+<h1>🧘‍♂️ 番外編｜回復とは何か？</h1>
+<p class="lead">
+トレーニングの効果は、<br>
+「回復」でもう一度完成します。<br>
+入浴・睡眠・呼吸——それぞれが体を整える鍵です。
+</p>
+
+<p style="max-width:600px; margin:0 auto 40px; color:#9ca3af; font-size:0.9rem; line-height:1.8;">
+疲労を抜くというより、<strong style="color:#22c55e;">次の動きへ再構築する時間</strong>。<br>
+体を休めることで、神経・筋・代謝の調律が起こります。<br>
+「止まる」ではなく、「整える」ための回復を学びましょう。
+</p>
+
+<button class="bath" onclick="openModal('m1')">♨ 入浴｜温でととのえる</button>
+<button class="sleep" onclick="openModal('m2')">🌙 睡眠｜自動で再生する</button>
+<button class="breath" onclick="openModal('m3')">💨 呼吸｜デジタルにリセット</button>
+
+<!-- モーダル１：入浴 -->
+<div id="m1" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('m1')">&times;</span>
+    <h2>♨ 入浴｜温でととのえる</h2>
+    <img src="../../images/recovery_bath.jpg" alt="入浴で整える">
+    <p>ぬるめの湯に10〜15分。  
+    温熱によって血流が全身にめぐり、  
+    筋肉の老廃物が流れ出す時間。  
+    トレーニング後に最適な“回復のはじまり”です。</p>
+    <div class="tag">タイミング：練習後〜就寝前</div>
+  </div>
+</div>
+
+<!-- モーダル２：睡眠 -->
+<div id="m2" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('m2')">&times;</span>
+    <h2>🌙 睡眠｜自動で再生する</h2>
+    <img src="../../images/recovery_sleep.jpg" alt="睡眠による再生">
+    <p>成長ホルモン分泌のピークは入眠後3時間。  
+    深い眠りの間に筋・神経・免疫の修復が進みます。  
+    光・温度・呼吸を整えて“再生モード”へ切り替えましょう。</p>
+    <div class="tag">タイミング：22時〜翌1時の入眠が理想</div>
+  </div>
+</div>
+
+<!-- モーダル３：呼吸 -->
+<div id="m3" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('m3')">&times;</span>
+    <h2>💨 呼吸｜デジタルにリセット</h2>
+    <img src="../../images/recovery_breath.jpg" alt="呼吸によるデジタルリカバリー">
+    <p>呼吸は神経の“操作パネル”。  
+    深く吸い、ゆっくり吐くことで自律神経が整い、  
+    心拍・血流・代謝のバランスがリセットされます。  
+    静かな場所で2分だけでも効果的。</p>
+    <div class="tag">タイミング：朝・入浴後・就寝前</div>
+  </div>
+</div>
+
+<script>
+function openModal(id){ document.getElementById(id).style.display='block'; }
+function closeModal(id){ document.getElementById(id).style.display='none'; }
+window.onclick = function(e){
+  ['m1','m2','m3'].forEach(id=>{
+    const modal=document.getElementById(id);
+    if(e.target===modal){ modal.style.display='none'; }
+  });
+}
+</script>
+
+<a href="../index.html" 
+   style="display:inline-block;
+          margin-top:30px;
+          padding:10px 18px;
+          background:linear-gradient(90deg,#22c55e,#16a34a);
+          color:#0d1117;
+          font-weight:bold;
+          border-radius:8px;
+          text-decoration:none;
+          box-shadow:0 0 10px rgba(34,197,94,0.4);
+          transition:0.3s;">
+  ◀ トップページに戻る
+</a>
+
+<footer>
+  <p>© 2025 adjustment-lab / Recovery edition</p>
+</footer>
+
+</body>
+</html>
