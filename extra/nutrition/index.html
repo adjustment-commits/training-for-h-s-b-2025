@@ -95,6 +95,25 @@ footer { margin-top:40px; color:#666; font-size:0.8rem; }
   from { opacity:0; transform:translateY(-10px); }
   to { opacity:1; transform:translateY(0); }
 }
+
+.meal-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+.meal-gallery img {
+  width: 46%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.meal-gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 14px rgba(255, 255, 255, 0.4);
+}
+  
 </style>
 </head>
 <body>
@@ -110,59 +129,93 @@ footer { margin-top:40px; color:#666; font-size:0.8rem; }
 体を作るのは量ではなく、「使われる仕組み」です。
 </p>
 
-  <p style="max-width:600px; margin:0 auto 28px; color:#e5e7eb; line-height:1.8;">
-  <strong style="color:#22c55e;">目的：</strong>
-  「食べる＝入れる」ではなく、「使う＝動かす」までを意識する。<br>
-  この番外編では、食べた栄養を体が“使い切れる”ようにするための<br>
-  食べ合わせとタイミングを学びます。
+ <p style="max-width:600px; margin:0 auto 40px; color:#9ca3af; font-size:0.9rem; line-height:1.8;">
+もしお子さんが「食べているのに体が大きくならない」と感じる場合は、<br>
+このページの内容を一度試してみてください。<br>
+量を増やすよりも、食べ合わせとタイミングの見直しで<br>
+体の変化が見えてくることがあります。
 </p>
 
 <button class="protein" onclick="openModal('m1')">🍖 タンパク質を活かす</button>
 <button class="bone" onclick="openModal('m2')">🥛 骨を強くする</button>
 <button class="energy" onclick="openModal('m3')">🍚 エネルギーを使える体に</button>
   
-<!-- モーダル１：タンパク質を活かす -->
+<!-- モーダル１ -->
 <div id="m1" class="modal">
   <div class="modal-content">
     <span class="close" onclick="closeModal('m1')">&times;</span>
     <h2>🍖 タンパク質を活かす</h2>
 
+    <h3>なぜ必要？</h3>
+    <p>タンパク質は筋肉・内臓・血液を作る材料ですが、<br>
+    分解・吸収の過程で多くのビタミンが使われます。<br>
+    そのサポートが不足すると“食べ損”になります。</p>
+
+    <h3>どうすればいい？</h3>
+    <p>ビタミンB群（特にB1・B6）を一緒に摂ると、<br>
+    アミノ酸の合成効率が上がり、<br>
+    練習で壊れた筋肉の修復がスムーズになります。</p>
+
     <h3>おすすめの一品</h3>
     <p>納豆卵かけご飯＋味噌汁（玄米ならさらに◎）</p>
+    <img src="images/meal_protein_01.jpg" alt="納豆卵かけご飯と味噌汁">
 
-    <div class="meal-gallery">
-      <img src="/images/meal_protein_01.jpg" alt="納豆卵かけご飯と味噌汁">
-    </div>
+    <h3>食べるタイミング</h3>
+    <div class="tag">練習後〜就寝前</div>
+    <p>筋肉修復と成長ホルモン分泌が活発になる時間帯。<br>
+    この時にアミノ酸とB群を補うと回復が早まります。</p>
   </div>
 </div>
 
-<!-- モーダル２：骨を強くする -->
+<!-- モーダル２ -->
 <div id="m2" class="modal">
   <div class="modal-content">
     <span class="close" onclick="closeModal('m2')">&times;</span>
     <h2>🥛 骨を強くする</h2>
 
+    <h3>なぜ必要？</h3>
+    <p>成長期の骨は毎日“壊して作る”を繰り返しています。<br>
+    カルシウムだけでは吸収されず、ビタミンDが必要です。</p>
+
+    <h3>どうすればいい？</h3>
+    <p>カルシウム（牛乳・チーズ）＋ビタミンD（鮭・きのこ）で<br>
+    吸収効率を高めましょう。<br>
+    日光に当たることも天然のD生成になります。</p>
+
     <h3>おすすめの一品</h3>
     <p>鮭ときのこのホイル焼き＋牛乳</p>
+    <img src="images/meal_bone_01.jpg" alt="鮭のホイル焼きと牛乳">
 
-    <div class="meal-gallery">
-      <img src="/images/meal_bone_01.jpg" alt="鮭ときのこのホイル焼きと牛乳">
-    </div>
+    <h3>食べるタイミング</h3>
+    <div class="tag">夕食時</div>
+    <p>夜の成長ホルモン分泌に合わせ、<br>
+    吸収が穏やかなD＋カルシウムで骨形成を支えます。</p>
   </div>
 </div>
 
-<!-- モーダル３：エネルギーを使える体に -->
+<!-- モーダル３ -->
 <div id="m3" class="modal">
   <div class="modal-content">
     <span class="close" onclick="closeModal('m3')">&times;</span>
     <h2>🍚 エネルギーを使える体に</h2>
 
+    <h3>なぜ必要？</h3>
+    <p>練習中にガス欠になる選手の多くは、<br>
+    エネルギー変換に必要なミネラルが足りていません。</p>
+
+    <h3>どうすればいい？</h3>
+    <p>マグネシウム・鉄・亜鉛を補うことで、<br>
+    炭水化物→エネルギーへの流れがスムーズになります。<br>
+    持久力や集中力の維持に直結します。</p>
+
     <h3>おすすめの一品</h3>
     <p>ひじきご飯＋豚の生姜焼き</p>
+    <img src="images/meal_energy_01.jpg" alt="ひじきご飯と豚の生姜焼き">
 
-    <div class="meal-gallery">
-      <img src="/images/meal_energy_01.jpg" alt="ひじきご飯と豚の生姜焼き">
-    </div>
+    <h3>食べるタイミング</h3>
+    <div class="tag">朝食・昼食</div>
+    <p>午前〜午後の練習に向けて、<br>
+    代謝のスイッチを入れるのに最適。</p>
   </div>
 </div>
 
@@ -176,6 +229,20 @@ window.onclick = function(e){
   });
 }
 </script>
+
+<a href="../index.html" 
+   style="display:inline-block;
+          margin-top:30px;
+          padding:10px 18px;
+          background:linear-gradient(90deg,#22c55e,#16a34a);
+          color:#0d1117;
+          font-weight:bold;
+          border-radius:8px;
+          text-decoration:none;
+          box-shadow:0 0 10px rgba(34,197,94,0.4);
+          transition:0.3s;">
+  ◀ トップページに戻る
+</a>
 
 <footer>
   <p>© 2025 adjustment-lab / Nutrition edition</p>
