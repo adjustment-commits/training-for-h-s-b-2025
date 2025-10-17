@@ -1,3 +1,5 @@
+こうか？
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -9,37 +11,20 @@ body {
   background:#0d1117;
   color:#fff;
   font-family:'Noto Sans JP',sans-serif;
-  padding:40px 20px;
   text-align:center;
+  padding:40px 20px;
 }
-h1 { 
-  color:#22c55e; 
-  margin-bottom:10px; 
-  font-size:1.4rem;
-}
-.icon-wrapper {
-  margin: 0 auto 20px;
-  width: 180px;
-  height: 180px;
-}
-.icon-wrapper img {
-  width: 100%;
-  height: auto;
-  border-radius: 50%;
-  box-shadow: 0 0 20px rgba(34,197,94,0.4);
-}
-p.lead {
-  font-size:1rem;
-  color:#ddd;
-  margin-bottom:30px;
-  line-height:1.8;
-}
+h1 { color:#22c55e; margin-bottom:10px; }
+.icon-wrapper { margin:0 auto 20px; width:180px; height:180px; }
+.icon-wrapper img { width:100%; border-radius:50%; box-shadow:0 0 20px rgba(34,197,94,0.4); }
+p.lead { color:#ccc; margin-bottom:30px; line-height:1.8; }
+
 button {
   display:block;
   width:100%;
   max-width:320px;
-  margin:20px auto;
-  padding:16px;
+  margin:16px auto;
+  padding:14px;
   font-size:1rem;
   border:none;
   border-radius:10px;
@@ -51,82 +36,182 @@ button:hover { transform:scale(1.03); }
 .protein { background:#3b82f6; }
 .bone { background:#facc15; color:#111; }
 .energy { background:#ef4444; }
-.detail {
+
+footer { margin-top:40px; color:#666; font-size:0.8rem; }
+
+/* モーダルウィンドウ */
+.modal {
   display:none;
-  background:#1e293b;
-  margin:10px auto;
-  padding:12px;
-  border-radius:8px;
-  max-width:340px;
-  text-align:left;
-  font-size:0.9rem;
-  color:#ddd;
-  line-height:1.6;
+  position:fixed;
+  z-index:100;
+  left:0; top:0;
+  width:100%; height:100%;
+  background:rgba(0,0,0,0.7);
 }
-footer {
-  margin-top:40px;
-  color:#666;
+.modal-content {
+  background:#1e293b;
+  color:#fff;
+  margin:8% auto;
+  padding:24px 26px;
+  border-radius:12px;
+  max-width:360px;
+  text-align:left;
+  position:relative;
+  animation:fadeIn 0.3s ease;
+}
+.modal-content h2 {
+  color:#22c55e;
+  font-size:1.1rem;
+  margin-bottom:10px;
+}
+.modal-content h3 {
+  color:#93c5fd;
+  font-size:0.95rem;
+  margin-top:14px;
+  margin-bottom:4px;
+}
+.modal-content p { line-height:1.7; font-size:0.9rem; margin-bottom:10px; color:#e5e7eb; }
+.modal-content img { width:100%; border-radius:10px; margin-top:10px; }
+
+.tag {
+  display:inline-block;
+  background:#22c55e;
+  color:#0d1117;
   font-size:0.8rem;
+  font-weight:bold;
+  padding:4px 10px;
+  border-radius:12px;
+  margin:8px 0;
 }
 
-.back-btn {
-  display:inline-block;
-  margin-top:40px;
-  background:linear-gradient(90deg, #22c55e, #15803d);
-  color:#0d1117;
-  font-weight:bold;
-  text-decoration:none;
-  padding:12px 22px;
-  border-radius:10px;
-  transition:0.3s;
-  box-shadow:0 0 12px rgba(34,197,94,0.4);
+.close {
+  position:absolute;
+  top:10px; right:14px;
+  font-size:1.3rem;
+  color:#aaa;
+  cursor:pointer;
 }
-.back-btn:hover {
-  background:linear-gradient(90deg, #15803d, #22c55e);
-  transform:scale(1.05);
+.close:hover { color:#fff; }
+
+@keyframes fadeIn {
+  from { opacity:0; transform:translateY(-10px); }
+  to { opacity:1; transform:translateY(0); }
 }
-  
 </style>
 </head>
 <body>
 
 <div class="icon-wrapper">
-  <img src="../../images/icon_growth_nutrition.png" alt="食と野球の成長アイコン">
+  <img src="images/icon_growth_nutrition.png" alt="食と野球の成長アイコン">
 </div>
 
 <h1>🍽️ 番外編｜食べても大きくならない理由？</h1>
 <p class="lead">
 「たくさん食べてるのに大きくならない」——<br>
-その原因は、量ではなく“つなぎ”かもしれない。<br>
-1品足すだけで、体のスイッチは入る。
+その原因は“食べ合わせ”にあるかもしれません。<br>
+体を作るのは量ではなく、「使われる仕組み」です。
 </p>
 
-<button class="protein" onclick="toggle('p1')">🍖 タンパク質を活かす</button>
-<div id="p1" class="detail">
-納豆や玄米などの「ビタミンB群」を足すと、<br>
-アミノ酸の利用効率が上がり、筋肉が作られやすくなる。
+  <p style="max-width:600px; margin:0 auto 28px; color:#e5e7eb; line-height:1.8;">
+  <strong style="color:#22c55e;">目的：</strong>
+  「食べる＝入れる」ではなく、「使う＝動かす」までを意識する。<br>
+  この番外編では、食べた栄養を体が“使い切れる”ようにするための<br>
+  食べ合わせとタイミングを学びます。
+</p>
+
+<button class="protein" onclick="openModal('m1')">🍖 タンパク質を活かす</button>
+<button class="bone" onclick="openModal('m2')">🥛 骨を強くする</button>
+<button class="energy" onclick="openModal('m3')">🍚 エネルギーを使える体に</button>
+  
+<!-- モーダル１ -->
+<div id="m1" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('m1')">&times;</span>
+    <h2>🍖 タンパク質を活かす</h2>
+
+    <h3>なぜ必要？</h3>
+    <p>タンパク質は筋肉・内臓・血液を作る材料ですが、<br>
+    分解・吸収の過程で多くのビタミンが使われます。<br>
+    そのサポートが不足すると“食べ損”になります。</p>
+
+    <h3>どうすればいい？</h3>
+    <p>ビタミンB群（特にB1・B6）を一緒に摂ると、<br>
+    アミノ酸の合成効率が上がり、<br>
+    練習で壊れた筋肉の修復がスムーズになります。</p>
+
+    <h3>おすすめの一品</h3>
+    <p>納豆卵かけご飯＋味噌汁（玄米ならさらに◎）</p>
+    <img src="../../images/sample_b1.png" alt="納豆卵かけご飯">
+
+    <h3>食べるタイミング</h3>
+    <div class="tag">練習後〜就寝前</div>
+    <p>筋肉修復と成長ホルモン分泌が活発になる時間帯。<br>
+    この時にアミノ酸とB群を補うと回復が早まります。</p>
+  </div>
 </div>
 
-<button class="bone" onclick="toggle('p2')">🥛 骨を強くする</button>
-<div id="p2" class="detail">
-鮭・きのこ・牛乳の「ビタミンD＋カルシウム」は、<br>
-骨の成長を助け、吸収効率を高める。
+<!-- モーダル２ -->
+<div id="m2" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('m2')">&times;</span>
+    <h2>🥛 骨を強くする</h2>
+
+    <h3>なぜ必要？</h3>
+    <p>成長期の骨は毎日“壊して作る”を繰り返しています。<br>
+    カルシウムだけでは吸収されず、ビタミンDが必要です。</p>
+
+    <h3>どうすればいい？</h3>
+    <p>カルシウム（牛乳・チーズ）＋ビタミンD（鮭・きのこ）で<br>
+    吸収効率を高めましょう。<br>
+    日光に当たることも天然のD生成になります。</p>
+
+    <h3>おすすめの一品</h3>
+    <p>鮭ときのこのホイル焼き＋牛乳</p>
+    <img src="../../images/sample_b2.png" alt="鮭のホイル焼き">
+
+    <h3>食べるタイミング</h3>
+    <div class="tag">夕食時</div>
+    <p>夜の成長ホルモン分泌に合わせ、<br>
+    吸収が穏やかなD＋カルシウムで骨形成を支えます。</p>
+  </div>
 </div>
 
-<button class="energy" onclick="toggle('p3')">🍚 エネルギーを使える体に</button>
-<div id="p3" class="detail">
-ひじき・ナッツ・レバーなどの「マグネシウム・鉄」は、<br>
-糖や酸素をエネルギーに変える代謝の潤滑油。
+<!-- モーダル３ -->
+<div id="m3" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('m3')">&times;</span>
+    <h2>🍚 エネルギーを使える体に</h2>
+
+    <h3>なぜ必要？</h3>
+    <p>練習中にガス欠になる選手の多くは、<br>
+    エネルギー変換に必要なミネラルが足りていません。</p>
+
+    <h3>どうすればいい？</h3>
+    <p>マグネシウム・鉄・亜鉛を補うことで、<br>
+    炭水化物→エネルギーへの流れがスムーズになります。<br>
+    持久力や集中力の維持に直結します。</p>
+
+    <h3>おすすめの一品</h3>
+    <p>ひじきご飯＋豚の生姜焼き</p>
+    <img src="../../images/sample_b3.png" alt="ひじきご飯">
+
+    <h3>食べるタイミング</h3>
+    <div class="tag">朝食・昼食</div>
+    <p>午前〜午後の練習に向けて、<br>
+    代謝のスイッチを入れるのに最適。</p>
+  </div>
 </div>
 
 <script>
-function toggle(id){
-  const el = document.getElementById(id);
-  el.style.display = (el.style.display === 'block') ? 'none' : 'block';
+function openModal(id){ document.getElementById(id).style.display='block'; }
+function closeModal(id){ document.getElementById(id).style.display='none'; }
+window.onclick = function(e){
+  ['m1','m2','m3'].forEach(id=>{
+    const modal=document.getElementById(id);
+    if(e.target===modal){ modal.style.display='none'; }
+  });
 }
 </script>
-
-<a href="../../index.html" class="back-btn">🏠 トップページに戻る</a>
 
 <footer>
   <p>© 2025 adjustment-lab / Nutrition edition</p>
