@@ -12,7 +12,28 @@ body {
   padding:40px 20px;
   text-align:center;
 }
-h1 { color:#22c55e; margin-bottom:10px; }
+h1 { 
+  color:#22c55e; 
+  margin-bottom:10px; 
+  font-size:1.4rem;
+}
+.icon-wrapper {
+  margin: 0 auto 20px;
+  width: 180px;
+  height: 180px;
+}
+.icon-wrapper img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(34,197,94,0.4);
+}
+p.lead {
+  font-size:1rem;
+  color:#ddd;
+  margin-bottom:30px;
+  line-height:1.8;
+}
 button {
   display:block;
   width:100%;
@@ -42,12 +63,25 @@ button:hover { transform:scale(1.03); }
   color:#ddd;
   line-height:1.6;
 }
+footer {
+  margin-top:40px;
+  color:#666;
+  font-size:0.8rem;
+}
 </style>
 </head>
 <body>
 
+<div class="icon-wrapper">
+  <img src="../../images/icon_growth_nutrition.png" alt="食と野球の成長アイコン">
+</div>
+
 <h1>🍽️ 番外編｜食べても大きくならない理由？</h1>
-<p>＋1品で体が変わる。<br>食べ合わせが、成長のカギ。</p>
+<p class="lead">
+「たくさん食べてるのに大きくならない」——<br>
+その原因は、量ではなく“つなぎ”かもしれない。<br>
+1品足すだけで、体のスイッチは入る。
+</p>
 
 <button class="protein" onclick="toggle('p1')">🍖 タンパク質を活かす</button>
 <div id="p1" class="detail">
@@ -74,8 +108,8 @@ function toggle(id){
 }
 </script>
 
-<footer style="margin-top:40px; color:#666; font-size:0.8rem;">
-© 2025 adjustment-lab / Nutrition edition
+<footer>
+  <p>© 2025 adjustment-lab / Nutrition edition</p>
 </footer>
 
 </body>
