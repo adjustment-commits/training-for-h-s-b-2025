@@ -2,251 +2,210 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ADJUSTMENT LAB｜高校野球トレーニング2025</title>
-<link rel="manifest" href="players/lesson01/manifest.json">
-<meta name="theme-color" content="#0d1117">
-<link rel="apple-touch-icon" sizes="192x192" href="players/lesson01/icons/icon-192-v2.png">
-<link rel="apple-touch-icon" sizes="512x512" href="players/lesson01/icons/icon-512.png">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>番外編｜食べても大きくならない理由？</title>
 <style>
 body {
-  background: #0d1117;
-  color: #fff;
-  font-family: 'Noto Sans JP', sans-serif;
-  text-align: center;
-  padding: 60px 20px;
-  line-height: 1.8;
+  background:#0d1117;
+  color:#fff;
+  font-family:'Noto Sans JP',sans-serif;
+  text-align:center;
+  padding:40px 20px;
 }
-h1 {
-  color: #d84a4a;
-  margin-bottom: 8px;
+h1 { color:#22c55e; margin-bottom:10px; }
+.icon-wrapper { margin:0 auto 20px; width:180px; height:180px; }
+.icon-wrapper img { width:100%; border-radius:50%; box-shadow:0 0 20px rgba(34,197,94,0.4); }
+p.lead { color:#ccc; margin-bottom:30px; line-height:1.8; }
+
+button {
+  display:block;
+  width:100%;
+  max-width:320px;
+  margin:16px auto;
+  padding:14px;
+  font-size:1rem;
+  border:none;
+  border-radius:10px;
+  color:#fff;
+  cursor:pointer;
+  transition:0.3s;
 }
-p.subtitle {
-  color: #ccc;
-  margin-bottom: 40px;
-  font-size: 1rem;
-  white-space: nowrap;       /* ← 改行を防止 */
-  overflow: hidden;          /* ← はみ出しを隠す */
-  text-overflow: ellipsis;   /* ← 小さい画面では「…」で省略 */
+button:hover { transform:scale(1.03); }
+.protein { background:#3b82f6; }
+.bone { background:#facc15; color:#111; }
+.energy { background:#ef4444; }
+
+footer { margin-top:40px; color:#666; font-size:0.8rem; }
+
+/* モーダルウィンドウ */
+.modal {
+  display:none;
+  position:fixed;
+  z-index:100;
+  left:0; top:0;
+  width:100%; height:100%;
+  background:rgba(0,0,0,0.7);
 }
-.lesson-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 14px;
-  max-width: 680px;
-  margin: 0 auto 40px;
+.modal-content {
+  background:#1e293b;
+  color:#fff;
+  margin:8% auto;
+  padding:24px 26px;
+  border-radius:12px;
+  max-width:360px;
+  text-align:left;
+  position:relative;
+  animation:fadeIn 0.3s ease;
 }
-.lesson-grid a {
-  display: block;
-  background: #1c2433;
-  border: 2px solid #d84a4a;
-  border-radius: 10px;
-  padding: 16px 12px;
-  color: #fff;
-  text-decoration: none;
-  font-size: 0.95rem;
-  transition: 0.3s;
-  text-align: left;
+.modal-content h2 {
+  color:#22c55e;
+  font-size:1.1rem;
+  margin-bottom:10px;
 }
-.lesson-grid a:hover {
-  background: #d84a4a;
-  border-color: #f47b7b;
-  transform: scale(1.02);
+.modal-content h3 {
+  color:#93c5fd;
+  font-size:0.95rem;
+  margin-top:14px;
+  margin-bottom:4px;
 }
-.lesson-grid a.active {
-  background: #f87171;
-  color: #0d1117;
-  font-weight: bold;
-}
-.coach-link {
-  display: inline-block;
-  margin-top: 30px;
-  background: linear-gradient(90deg, #1e3a8a, #3b82f6);
-  color: #e2e8f0;
-  text-decoration: none;
-  padding: 10px 16px;
-  border-radius: 8px;
-  border: 1px solid #60a5fa;
-  font-size: 0.9rem;
-  transition: 0.3s;
-  box-shadow: 0 0 10px rgba(59,130,246,0.3);
+.modal-content p { line-height:1.7; font-size:0.9rem; margin-bottom:10px; color:#e5e7eb; }
+.modal-content img { width:100%; border-radius:10px; margin-top:10px; }
+
+.tag {
+  display:inline-block;
+  background:#22c55e;
+  color:#0d1117;
+  font-size:0.8rem;
+  font-weight:bold;
+  padding:4px 10px;
+  border-radius:12px;
+  margin:8px 0;
 }
 
-.coach-link:hover {
-  background: linear-gradient(90deg, #3b82f6, #1e40af);
-  color: #fff;
-  transform: scale(1.03);
+.close {
+  position:absolute;
+  top:10px; right:14px;
+  font-size:1.3rem;
+  color:#aaa;
+  cursor:pointer;
 }
-footer {
-  margin-top: 60px;
-  font-size: 0.8rem;
-  color: #777;
-}
-.cert-btn {
-  display: inline-block;
-  margin-top: 40px;
-  background: linear-gradient(90deg, #facc15, #f87171);
-  color: #0d1117;
-  font-weight: bold;
-  text-decoration: none;
-  padding: 12px 20px;
-  border-radius: 10px;
-  transition: 0.3s;
-  box-shadow: 0 0 15px rgba(255,255,255,0.3);
-}
-.cert-btn:hover {
-  background: linear-gradient(90deg, #f87171, #facc15);
-  transform: scale(1.03);
-}
-  /* 各レッスンカードのタイトルを統一 */
-.lesson-link h2 {
-  font-size: 1.1rem;     /* ←ここで全体の大きさを統一 */
-  line-height: 1.4;
-  margin: 4px 0;
-  text-align: center;
-}
+.close:hover { color:#fff; }
 
-/* サブタイトル（第0回なども含む） */
-.lesson-link p {
-  font-size: 0.9rem;
-  color: #ccc;
-  margin: 0;
-  text-align: center;
+@keyframes fadeIn {
+  from { opacity:0; transform:translateY(-10px); }
+  to { opacity:1; transform:translateY(0); }
 }
-
-  /* ✅ 第0回のタイトル文字サイズを統一（h2を強制上書き） */
-.lesson-grid a h2 {
-  font-size: 0.95rem !important;
-  font-weight: normal;
-  line-height: 1.4;
-  margin: 4px 0;
-  text-align: center;
-}
-
-/* スマホで第0回が消える問題の修正 */
-.lesson-grid a {
-  min-height: 80px;   /* ← これが最重要。高さを確保する */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-}
-
-.extra-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  background: #1a2b1a;
-  border: 2px solid #22c55e;
-  border-radius: 10px;
-  padding: 14px 12px;
-  color: #fff;
-  font-size: 0.95rem;
-  text-decoration: none;
-  transition: 0.3s;
-  margin: 10px auto;
-  max-width: 420px;
-}
-.extra-link img {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  box-shadow: 0 0 12px rgba(34,197,94,0.5);
-  animation: glow 2.8s ease-in-out infinite alternate;
-}
-@keyframes glow {
-  from { box-shadow: 0 0 8px rgba(34,197,94,0.4); }
-  to   { box-shadow: 0 0 20px rgba(34,197,94,0.9); }
-}
-.extra-link:hover {
-  background: #22c55e;
-  color: #0d1117;
-  transform: scale(1.03);
-}
-  
 </style>
 </head>
 <body>
 
-<h1>⚾️中学3年生⚾️<br>トレーニング教室</h1>
-<p class="subtitle">高校野球の中で、自分を磨く準備。</p>
-
-<div class="lesson-grid">
-  <a href="lesson00/index.html">第0回｜体と思考の準備</a>
-  <a href="players/lesson01/index.html">第 1回｜野球動作の再学習</a>
-  <a href="players/lesson02/index.html">第 2回｜力を伝えるとは？</a>
-  <a href="players/lesson03/index.html">第 3回｜安定と軸</a>
-  <a href="players/lesson04/index.html">第 4回｜回旋と反応</a>
-  <a href="players/lesson05/index.html">第 5回｜下半身のタイミング</a>
-  <a href="players/lesson06/index.html">第 6回｜グラウンド反力</a>
-  <a href="players/lesson07/index.html">第 7回｜骨盤の滑走</a>
-  <a href="players/lesson08/index.html">第 8回｜冬モードへの切り替え</a>
-  <a href="players/lesson09/index.html">第 9回｜下肢と体幹の共鳴</a>
-  <a href="players/lesson10/index.html">第10回｜呼吸と安定</a>
-  <a href="players/lesson11/index.html">第11回｜ストライドと方向性</a>
-  <a href="players/lesson12/index.html">第12回｜回旋速度の獲得</a>
-  <a href="players/lesson13/index.html">第13回｜グラウンド感覚の深化</a>
-  <a href="players/lesson14/index.html">第14回｜安定の再構築</a>
-  <a href="players/lesson15/index.html">第15回｜反応と連動</a>
-  <a href="players/lesson16/index.html">第16回｜統合と表現</a>
+<div class="icon-wrapper">
+  <img src="../../images/icon_growth_nutrition.png" alt="食と野球の成長アイコン">
 </div>
 
-<a href="extra/nutrition/index.html" class="extra-link">
-  <img src="images/icon_growth_nutrition.png" alt="食と野球の成長アイコン">
-  <span>🍽️ 番外編｜食べても大きくならない理由？</span>
-</a>
+<h1>🍽️ 番外編｜食べても大きくならない理由？</h1>
+<p class="lead">
+「たくさん食べてるのに大きくならない」——<br>
+その原因は“食べ合わせ”にあるかもしれません。<br>
+体を作るのは量ではなく、「使われる仕組み」です。
+</p>
 
-<a href="#" id="coachLink" class="coach-link">▶ ADJ COACHING MAP</a>
+<button class="protein" onclick="openModal('m1')">🍖 タンパク質を活かす</button>
+<button class="bone" onclick="openModal('m2')">🥛 骨を強くする</button>
+<button class="energy" onclick="openModal('m3')">🍚 エネルギーを使える体に</button>
+
+<!-- モーダル１ -->
+<div id="m1" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('m1')">&times;</span>
+    <h2>🍖 タンパク質を活かす</h2>
+
+    <h3>なぜ必要？</h3>
+    <p>タンパク質は筋肉・内臓・血液を作る材料ですが、<br>
+    分解・吸収の過程で多くのビタミンが使われます。<br>
+    そのサポートが不足すると“食べ損”になります。</p>
+
+    <h3>どうすればいい？</h3>
+    <p>ビタミンB群（特にB1・B6）を一緒に摂ると、<br>
+    アミノ酸の合成効率が上がり、<br>
+    練習で壊れた筋肉の修復がスムーズになります。</p>
+
+    <h3>おすすめの一品</h3>
+    <p>納豆卵かけご飯＋味噌汁（玄米ならさらに◎）</p>
+    <img src="../../images/sample_b1.png" alt="納豆卵かけご飯">
+
+    <h3>食べるタイミング</h3>
+    <div class="tag">練習後〜就寝前</div>
+    <p>筋肉修復と成長ホルモン分泌が活発になる時間帯。<br>
+    この時にアミノ酸とB群を補うと回復が早まります。</p>
+  </div>
+</div>
+
+<!-- モーダル２ -->
+<div id="m2" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('m2')">&times;</span>
+    <h2>🥛 骨を強くする</h2>
+
+    <h3>なぜ必要？</h3>
+    <p>成長期の骨は毎日“壊して作る”を繰り返しています。<br>
+    カルシウムだけでは吸収されず、ビタミンDが必要です。</p>
+
+    <h3>どうすればいい？</h3>
+    <p>カルシウム（牛乳・チーズ）＋ビタミンD（鮭・きのこ）で<br>
+    吸収効率を高めましょう。<br>
+    日光に当たることも天然のD生成になります。</p>
+
+    <h3>おすすめの一品</h3>
+    <p>鮭ときのこのホイル焼き＋牛乳</p>
+    <img src="../../images/sample_b2.png" alt="鮭のホイル焼き">
+
+    <h3>食べるタイミング</h3>
+    <div class="tag">夕食時</div>
+    <p>夜の成長ホルモン分泌に合わせ、<br>
+    吸収が穏やかなD＋カルシウムで骨形成を支えます。</p>
+  </div>
+</div>
+
+<!-- モーダル３ -->
+<div id="m3" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('m3')">&times;</span>
+    <h2>🍚 エネルギーを使える体に</h2>
+
+    <h3>なぜ必要？</h3>
+    <p>練習中にガス欠になる選手の多くは、<br>
+    エネルギー変換に必要なミネラルが足りていません。</p>
+
+    <h3>どうすればいい？</h3>
+    <p>マグネシウム・鉄・亜鉛を補うことで、<br>
+    炭水化物→エネルギーへの流れがスムーズになります。<br>
+    持久力や集中力の維持に直結します。</p>
+
+    <h3>おすすめの一品</h3>
+    <p>ひじきご飯＋豚の生姜焼き</p>
+    <img src="../../images/sample_b3.png" alt="ひじきご飯">
+
+    <h3>食べるタイミング</h3>
+    <div class="tag">朝食・昼食</div>
+    <p>午前〜午後の練習に向けて、<br>
+    代謝のスイッチを入れるのに最適。</p>
+  </div>
+</div>
 
 <script>
-// ===============================
-// ADJ COACHING MAP パスワード制御
-// ===============================
-document.getElementById("coachLink").addEventListener("click", function (event) {
-  event.preventDefault(); // 通常のリンク動作を停止
-  const pass = prompt("【ADJ COACHING MAP】\nアクセスパスワードを入力してください：");
-  
-  const correctPass = "adjhrsnsmt"; // ✅ パスワード
-
-  if (pass === correctPass) {
-    window.location.href = "coach/lesson01/index.html";
-  } else if (pass === null) {
-    return;
-  } else {
-    alert("パスワードが違います。");
-  }
-});
-</script>
-
-<a href="certificate/index.html" class="cert-btn" id="certButton" style="display:none;">🎓 修了証を見る</a>
-
-<p id="certPlaceholder" style="color:#666;">🎓 COMING SOON...</p>
-
-<script>
-// ===============================
-// 修了証ボタンの公開日時制御
-// ===============================
-document.addEventListener("DOMContentLoaded", function() {
-  const certButton = document.getElementById("certButton");
-  const certPlaceholder = document.getElementById("certPlaceholder");
-
-  // 公開日時：2026年2月25日 20:55（日本時間）
-  const releaseDate = new Date("2026-02-25T20:55:00+09:00");
-  const now = new Date();
-
-  if (now >= releaseDate) {
-    certButton.style.display = "inline-block";  // 表示
-    certPlaceholder.style.display = "none";     // COMING SOONを消す
-  } else {
-    certButton.style.display = "none";          // 非表示
-    certPlaceholder.style.display = "block";    // COMING SOONを表示
-  }
-});
+function openModal(id){ document.getElementById(id).style.display='block'; }
+function closeModal(id){ document.getElementById(id).style.display='none'; }
+window.onclick = function(e){
+  ['m1','m2','m3'].forEach(id=>{
+    const modal=document.getElementById(id);
+    if(e.target===modal){ modal.style.display='none'; }
+  });
+}
 </script>
 
 <footer>
-  <p>© 2025 adjustment-lab / Design by H. Nishimoto</p>
+  <p>© 2025 adjustment-lab / Nutrition edition</p>
 </footer>
 
 </body>
