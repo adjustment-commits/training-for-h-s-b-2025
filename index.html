@@ -131,6 +131,39 @@ footer {
   justify-content: center;
   text-align: center;
 }
+
+.extra-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: #1a2b1a;
+  border: 2px solid #22c55e;
+  border-radius: 10px;
+  padding: 14px 12px;
+  color: #fff;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: 0.3s;
+  margin: 10px auto;
+  max-width: 420px;
+}
+.extra-link img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  box-shadow: 0 0 12px rgba(34,197,94,0.5);
+  animation: glow 2.8s ease-in-out infinite alternate;
+}
+@keyframes glow {
+  from { box-shadow: 0 0 8px rgba(34,197,94,0.4); }
+  to   { box-shadow: 0 0 20px rgba(34,197,94,0.9); }
+}
+.extra-link:hover {
+  background: #22c55e;
+  color: #0d1117;
+  transform: scale(1.03);
+}
   
 </style>
 </head>
@@ -159,9 +192,10 @@ footer {
   <a href="players/lesson16/index.html">第16回｜統合と表現</a>
 </div>
 
-<a href="extra/nutrition/index.html" style="border-color:#22c55e; background:#1a2b1a;">
-    🍽️ 番外編｜食べても大きくならない理由？
-  </a>
+<a href="extra/nutrition/index.html" class="extra-link">
+  <img src="images/icon_growth_nutrition.png" alt="食と野球の成長アイコン">
+  <span>🍽️ 番外編｜食べても大きくならない理由？</span>
+</a>
 
 <a href="#" id="coachLink" class="coach-link">▶ ADJ COACHING MAP</a>
 
