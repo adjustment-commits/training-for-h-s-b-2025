@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>番外編｜考える力とパフォーマンス</title>
+<style>
+body {
+  background:#0d1117;
+  color:#fff;
+  font-family:'Noto Sans JP',sans-serif;
+  text-align:center;
+  padding:40px 20px;
+}
+h1 { color:#22c55e; margin-bottom:10px; }
+.icon-wrapper { margin:0 auto 20px; width:180px; height:180px; }
+.icon-wrapper img { width:100%; border-radius:50%; box-shadow:0 0 20px rgba(34,197,94,0.4); }
+p.lead { color:#ccc; margin-bottom:30px; line-height:1.8; }
+
+button {
+  display:block;
+  width:100%;
+  max-width:320px;
+  margin:16px auto;
+  padding:14px;
+  font-size:1rem;
+  border:none;
+  border-radius:10px;
+  color:#fff;
+  cursor:pointer;
+  transition:0.3s;
+}
+button:hover { transform:scale(1.03); }
+.result { background:#3b82f6; }
+.invest { background:#facc15; color:#111; }
+.effort { background:#ef4444; }
+
+footer { margin-top:40px; color:#666; font-size:0.8rem; }
+
+/* モーダル */
+.modal {
+  display:none;
+  position:fixed;
+  z-index:100;
+  left:0; top:0;
+  width:100%; height:100%;
+  background:rgba(0,0,0,0.7);
+}
+.modal-content {
+  background:#1e293b;
+  color:#fff;
+  margin:8% auto;
+  padding:24px 26px;
+  border-radius:12px;
+  max-width:380px;
+  text-align:left;
+  position:relative;
+  animation:fadeIn 0.3s ease;
+}
+.modal-content h2 {
+  color:#22c55e;
+  font-size:1.1rem;
+  margin-bottom:10px;
+}
+.modal-content h3 {
+  color:#93c5fd;
+  font-size:0.95rem;
+  margin-top:14px;
+  margin-bottom:4px;
+}
+.modal-content p { line-height:1.7; font-size:0.9rem; margin-bottom:10px; color:#e5e7eb; }
+
+.close {
+  position:absolute;
+  top:10px; right:14px;
+  font-size:1.3rem;
+  color:#aaa;
+  cursor:pointer;
+}
+.close:hover { color:#fff; }
+
+@keyframes fadeIn {
+  from { opacity:0; transform:translateY(-10px); }
+  to { opacity:1; transform:translateY(0); }
+}
+</style>
+</head>
+<body>
+
+<div class="icon-wrapper">
+  <img src="../../images/icon_thinking_lab.png" alt="考えるアイコン">
+</div>
+
+<h1>🧠 番外編｜考える力とパフォーマンス</h1>
+<p class="lead">
+パフォーマンスとは「求められる結果を出すための思考や行動」。<br>
+トレーニングも勝負も、“考える力”で再現性が決まります。
+</p>
+
+<button class="result" onclick="openModal('m1')">🎯 結果を出す思考</button>
+<button class="invest" onclick="openModal('m2')">⏱️ 時間への投資</button>
+<button class="effort" onclick="openModal('m3')">🔥 全力と最大努力</button>
+
+<!-- モーダル１ -->
+<div id="m1" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('m1')">&times;</span>
+    <h2>🎯 結果を出す思考</h2>
+    <p>パフォーマンス＝「求められる結果を出すための思考や行動」。<br>
+    絶対的パフォーマンス（＝自分の能力値）だけでなく、<br>
+    相対的パフォーマンス（＝相手・状況への適応）が重要です。</p>
+    <p>野球ゲームで言えば、<br>
+    絶対的パフォーマンスは基本能力、<br>
+    相対的パフォーマンスは特殊能力。<br>
+    勝負を決めるのは後者です。</p>
+  </div>
+</div>
+
+<!-- モーダル２ -->
+<div id="m2" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('m2')">&times;</span>
+    <h2>⏱️ 時間への投資</h2>
+    <p>学生ができる最大の投資は「時間」です。<br>
+    金銭的投資は保護者が行うもの。<br>
+    自分の時間をどう使うかで未来の成長曲線が変わります。</p>
+    <p>今日の練習・学び・休養の1時間が、<br>
+    半年後の差になる。<br>
+    時間を浪費せず、成長に投資する感覚を持とう。</p>
+  </div>
+</div>
+
+<!-- モーダル３ -->
+<div id="m3" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('m3')">&times;</span>
+    <h2>🔥 全力と最大努力</h2>
+    <p>「全力」とは、その条件で求められる最大限を出し切ること。<br><br>
+    ① 距離が決まっているなら最短時間＝最速＝全力<br>
+    ② 回数が決まっているなら最後の1回までが全力<br>
+    ③ 時間が決まっているなら0秒まで継続が全力<br>
+    ④ 速度が決まっているなら限界まで追うのが全力</p>
+    <p>最大努力でできるか、そして最大努力の閾値を上げられるか。<br>
+    これが成長の分かれ目です。</p>
+  </div>
+</div>
+
+<script>
+function openModal(id){ document.getElementById(id).style.display='block'; }
+function closeModal(id){ document.getElementById(id).style.display='none'; }
+window.onclick = function(e){
+  ['m1','m2','m3'].forEach(id=>{
+    const modal=document.getElementById(id);
+    if(e.target===modal){ modal.style.display='none'; }
+  });
+}
+</script>
+
+<a href="../index.html" 
+   style="display:inline-block;
+          margin-top:30px;
+          padding:10px 18px;
+          background:linear-gradient(90deg,#22c55e,#16a34a);
+          color:#0d1117;
+          font-weight:bold;
+          border-radius:8px;
+          text-decoration:none;
+          box-shadow:0 0 10px rgba(34,197,94,0.4);
+          transition:0.3s;">
+  ◀ トップページに戻る
+</a>
+
+<footer>
+  <p>© 2025 adjustment-lab / Thinking edition</p>
+</footer>
+
+</body>
+</html>
