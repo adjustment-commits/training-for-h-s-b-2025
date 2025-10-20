@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ADJUSTMENT LAB｜高校野球トレーニング2025</title>
-<link rel="manifest" href="players/lesson01/manifest.json">
+<link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#0d1117">
 <link rel="apple-touch-icon" sizes="192x192" href="players/lesson01/icons/icon-192-v2.png">
 <link rel="apple-touch-icon" sizes="512x512" href="players/lesson01/icons/icon-512.png">
@@ -169,6 +169,16 @@ footer {
 <footer>
   <p>© 2025 adjustment-lab / Design by H. Nishimoto</p>
 </footer>
+
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('service-worker.js')
+      .then(reg => console.log('✅ Service Worker registered:', reg.scope))
+      .catch(err => console.log('❌ Service Worker failed:', err));
+  });
+}
+</script>
 
 </body>
 </html>
