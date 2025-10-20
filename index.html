@@ -77,6 +77,9 @@ p.subtitle {
 .extra-link img {
   width: 48px;
   height: 48px;
+  object-fit: contain;       /* ← 画像を中央に保ったまま余白調整 */
+  display: block;
+  margin-top: 4px;           /* 微調整（ズレが気になるとき） */
   border-radius: 50%;
   box-shadow: 0 0 12px rgba(34,197,94,0.5);
   animation: glow 2.8s ease-in-out infinite alternate;
