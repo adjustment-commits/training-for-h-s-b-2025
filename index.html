@@ -174,6 +174,20 @@ footer {
   <span>🧠 番外編｜考える力とパフォーマンス</span>
 </a>
 
+<!-- ✅ ADJ COACHING MAP（指導者専用アクセス） -->
+<a href="#" class="coach-link" onclick="checkCoachAccess()">▶ ADJ COACHING MAP（指導者用）</a>
+
+<script>
+function checkCoachAccess() {
+  const pass = prompt("アクセスパスワードを入力してください：");
+  if (pass === "adjcoach2025") {
+    window.location.href = "coach/lesson01/index.html";
+  } else if (pass !== null) {
+    alert("パスワードが違います。");
+  }
+}
+</script>
+
 <footer>
   <p>© 2025 adjustment-lab / Design by H. Nishimoto</p>
 </footer>
