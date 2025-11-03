@@ -46,13 +46,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // 正解判定
         if (answer === "動きながら支えること") {
-          feedback.textContent = "正解。安定とは“動きの中で支えること”。止めずに流れを保つ。";
+          feedback.textContent = "正解。安定とは“動きの中で支えること”。<br>止めずに流れを保つ。";
           feedback.style.color = "#4ade80";
         } else if (answer === "支えること") {
-          feedback.textContent = "惜しい。静的な支えではなく、“動的安定”が大事。";
+          feedback.textContent = "惜しい。<br>静的な支えではなく“動的安定”が大事。";
           feedback.style.color = "#ffd166";
         } else {
-          feedback.textContent = "違う。動きを止めるのではなく、中心でコントロールすることが安定だ。";
+          feedback.textContent = "違う。<br>動きを止めるのではなく<br>中心でコントロールすることが安定。";
           feedback.style.color = "#f87171";
         }
 
