@@ -205,29 +205,39 @@ navigator.serviceWorker.register('service-worker.js')
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const now = new Date();
-  const month = now.getMonth() + 1; // JSは1月が0なので +1
 
-  const lessons = document.querySelectorAll(".lesson-grid a");
+  const releaseDates = {
+    // 3〜4回 → 2025年11月1日解禁
+    lesson03: new Date(2025, 10, 1),
+    lesson04: new Date(2025, 10, 1),
 
-  lessons.forEach(link => {
+    // 5〜8回 → 2025年12月1日解禁
+    lesson05: new Date(2025, 11, 1),
+    lesson06: new Date(2025, 11, 1),
+    lesson07: new Date(2025, 11, 1),
+    lesson08: new Date(2025, 11, 1),
+
+    // 9〜12回 → 2026年1月1日解禁
+    lesson09: new Date(2026, 0, 1),
+    lesson10: new Date(2026, 0, 1),
+    lesson11: new Date(2026, 0, 1),
+    lesson12: new Date(2026, 0, 1),
+
+    // 13〜16回 → 2026年2月1日解禁
+    lesson13: new Date(2026, 1, 1),
+    lesson14: new Date(2026, 1, 1),
+    lesson15: new Date(2026, 1, 1),
+    lesson16: new Date(2026, 1, 1)
+  };
+
+  document.querySelectorAll(".lesson-grid a").forEach(link => {
     const href = link.getAttribute("href");
-
-    // === 公開条件 ===
-    if (
-      // 3〜4回 → 11月1日解禁
-      ((href.includes("lesson03") || href.includes("lesson04")) && month < 11) ||
-      // 5〜8回 → 12月1日解禁
-      ((href.includes("lesson05") || href.includes("lesson06") || href.includes("lesson07") || href.includes("lesson08")) && month < 12) ||
-      // 9〜12回 → 1月1日解禁
-      ((href.includes("lesson09") || href.includes("lesson10") || href.includes("lesson11") || href.includes("lesson12")) && month < 1) ||
-      // 13〜16回 → 2月1日解禁
-      ((href.includes("lesson13") || href.includes("lesson14") || href.includes("lesson15") || href.includes("lesson16")) && month < 2)
-    ) {
-      // 🔒 非表示にする
-      link.style.display = "none";
+    for (const key in releaseDates) {
+      if (href.includes(key) && now < releaseDates[key]) {
+        link.style.display = "none"; // 🔒 解禁前は非表示
+      }
     }
   });
 });
-</script>
-</body>
+</script></body>
 </html>
