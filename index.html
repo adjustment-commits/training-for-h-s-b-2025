@@ -132,6 +132,49 @@ footer {
   background: linear-gradient(90deg, #f87171, #facc15);
   transform: scale(1.03);
 }
+
+ .care-box{
+    margin:40px auto 10px;
+    max-width:260px;
+    cursor:pointer;
+    text-align:center;
+  }
+  .care-thumb{
+    width:100%;
+    border-radius:10px;
+    border:2px solid #22c55e;
+  }
+  .care-label{
+    margin-top:8px;
+    font-size:0.9rem;
+    color:#22c55e;
+  }
+
+  /* モーダル */
+  .modal{
+    display:none;
+    position:fixed;
+    z-index:1000;
+    left:0; top:0;
+    width:100%; height:100%;
+    background:rgba(0,0,0,0.85);
+    padding-top:40px;
+  }
+  .modal-content{
+    margin:auto;
+    display:block;
+    width:92%;
+    max-width:600px;
+    border-radius:10px;
+  }
+  .modal-close{
+    position:absolute;
+    top:20px; right:30px;
+    font-size:32px;
+    color:#fff;
+    cursor:pointer;
+  }
+
 </style>
 </head>
 <body>
@@ -173,6 +216,31 @@ footer {
   <img src="./images/icon_think_lab.png" alt="考えるアイコン">
   <span>🧠 番外編｜考える力とパフォーマンス</span>
 </a>
+
+<!-- ▼▼ 追記：メンテナンス案内（サムネ＋モーダル） ▼▼ -->
+<div class="care-box" onclick="openCareModal()">
+  <img src="images/care_thumb.jpg" alt="体のケア" class="care-thumb">
+  <p class="care-label">体のケアを受けたい時は</p>
+</div>
+
+<!-- モーダル本体 -->
+<div id="careModal" class="modal">
+  <span class="modal-close" onclick="closeCareModal()">×</span>
+  <img class="modal-content" id="careImage">
+</div>
+
+<!-- ▼▼ モーダル画像表示JS ▼▼ -->
+<script>
+function openCareModal(){
+  const modal = document.getElementById("careModal");
+  const img   = document.getElementById("careImage");
+  img.src = "images/maintenance_full.jpg";   // ← フル画像パス
+  modal.style.display = "block";
+}
+function closeCareModal(){
+  document.getElementById("careModal").style.display = "none";
+}
+</script>
 
 <!-- ✅ ADJ COACHING MAP（指導者専用アクセス） -->
 <a href="#" class="coach-link" onclick="checkCoachAccess()">▶ ADJ COACHING MAP（指導者用）</a>
