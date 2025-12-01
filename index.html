@@ -175,6 +175,26 @@ footer {
     cursor:pointer;
   }
 
+/* ボタンスタイル */
+.care-btn{
+  display:block;
+  margin:40px auto 10px;
+  padding:12px 20px;
+  background:#22c55e;
+  color:#0d1117;
+  border:none;
+  border-radius:8px;
+  font-size:1rem;
+  font-weight:bold;
+  cursor:pointer;
+  box-shadow:0 0 12px rgba(34,197,94,0.5);
+  transition:0.25s;
+}
+.care-btn:hover{
+  background:#4ade80;
+  transform:scale(1.03);
+}
+
 </style>
 </head>
 <body>
@@ -218,10 +238,10 @@ footer {
 </a>
 
 <!-- ▼▼ 追記：メンテナンス案内（サムネ＋モーダル） ▼▼ -->
-<div class="care-box" onclick="openCareModal()">
-  <img src="images/care_thumb.jpg" alt="体のケア" class="care-thumb">
-  <p class="care-label">体のケアを受けたい時は</p>
-</div>
+<!-- ▼▼ ボディケアボタン（モーダル起動） ▼▼ -->
+<button class="care-btn" onclick="openCareModal()">
+  疲労をとるボディケア（有料）
+</button>
 
 <!-- モーダル本体 -->
 <div id="careModal" class="modal">
