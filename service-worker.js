@@ -49,35 +49,35 @@ const urlsToCache = [
 
   './players/lesson09/index.html',
   './players/lesson09/style.css',
-  './players/lesson09/main.js',
+  './players/lesson08/main.js',
 
   './players/lesson10/index.html',
   './players/lesson10/style.css',
-  './players/lesson10/main.js',
+  './players/lesson08/main.js',
 
   './players/lesson11/index.html',
   './players/lesson11/style.css',
-  './players/lesson11/main.js',
+  './players/lesson08/main.js',
 
   './players/lesson12/index.html',
   './players/lesson12/style.css',
-  './players/lesson12/main.js',
+  './players/lesson08/main.js',
 
   './players/lesson13/index.html',
   './players/lesson13/style.css',
-  './players/lesson13/main.js',
+  './players/lesson08/main.js',
 
   './players/lesson14/index.html',
   './players/lesson14/style.css',
-  './players/lesson14/main.js',
+  './players/lesson08/main.js',
 
   './players/lesson15/index.html',
   './players/lesson15/style.css',
-  './players/lesson15/main.js',
+  './players/lesson08/main.js',
 
   './players/lesson16/index.html',
   './players/lesson16/style.css',
-  './players/lesson16/main.js',
+  './players/lesson08/main.js',
 
   /* ---- コーチ専用 ---- */
   './coach/lesson01/index.html'
