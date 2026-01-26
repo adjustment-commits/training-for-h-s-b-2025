@@ -136,15 +136,28 @@ button:hover {
   color: #94a3b8;
 }
 
-img {
-  max-width: 85%;
+.scene {
+  display: none;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+  max-width: 760px;
+  padding: 20px;
+  position: relative;
+}
+
+.scene img {
+  max-width: 420px;
+  width: 90%;
+  height: auto;
+  display: block;
+  margin: 16px auto;
+}
+
+.diagram-lg {
+  max-width: 520px;
   height: auto;
 }
-
-.diagram {
-  max-width: 75%;
-}
-
 /* ===============================
    背景アニメーション：冷光の中に温度が戻る
    =============================== */
