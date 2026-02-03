@@ -160,3 +160,12 @@ button:hover {
   p { font-size: 1rem; line-height: 1.7; }
   button, .next-lesson-btn { font-size: 0.95rem; padding: 8px 14px; }
 }
+
+.scene img {
+  max-width: 420px;
+  width: 90%;
+}
+
+.diagram-lg {
+  max-width: 520px;
+}
