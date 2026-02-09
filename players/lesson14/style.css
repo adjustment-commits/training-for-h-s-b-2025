@@ -145,6 +145,7 @@ button:hover {
   }
   50% {
     background: linear-gradient(180deg, #1e293b 0%, #334155 40%, #475569 100%);
+
   }
   100% {
     background: linear-gradient(180deg, #0f172a 0%, #334155 40%, #64748b 100%);
@@ -159,4 +160,15 @@ button:hover {
   h2 { font-size: 1.2rem; }
   p { font-size: 1rem; line-height: 1.7; }
   button, .next-lesson-btn { font-size: 0.95rem; padding: 8px 14px; }
+}
+
+/* ===============================
+   Image Control（全端末共通）
+   =============================== */
+.scene img {
+  display: block;
+  width: 100%;
+  max-width: 520px;   /* PC時の上限 */
+  height: auto;
+  margin: 20px auto;
 }
